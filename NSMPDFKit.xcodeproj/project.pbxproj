@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2C7930FA15B2E09600308992 /* NSMPDFKitFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2C7930FB15B2E09600308992 /* Build configuration list for PBXAggregateTarget "NSMPDFKitFramework" */;
+			buildPhases = (
+				2C79310015B2E0C800308992 /* Build Framework */,
+			);
+			dependencies = (
+				2C7930FF15B2E09E00308992 /* PBXTargetDependency */,
+				2C01260615B365AB008A57BA /* PBXTargetDependency */,
+			);
+			name = NSMPDFKitFramework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2C0125F615B3650B008A57BA /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C0125F515B3650B008A57BA /* CoreFoundation.framework */; };
+		2C0125FC15B3650B008A57BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C0125FA15B3650B008A57BA /* InfoPlist.strings */; };
+		2C01260315B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
+		2C01260415B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
+		2C7930D015B2DEBD00308992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CF15B2DEBD00308992 /* Foundation.framework */; };
+		2C7930EF15B2DF2400308992 /* NSMPDFContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930DF15B2DF2400308992 /* NSMPDFContext.m */; };
+		2C7930F015B2DF2400308992 /* NSMPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E115B2DF2400308992 /* NSMPDFDocument.m */; };
+		2C7930F115B2DF2400308992 /* NSMPDFFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E315B2DF2400308992 /* NSMPDFFont.m */; };
+		2C7930F215B2DF2400308992 /* NSMPDFMarkedSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E515B2DF2400308992 /* NSMPDFMarkedSequence.m */; };
+		2C7930F315B2DF2400308992 /* NSMPDFPage+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E715B2DF2400308992 /* NSMPDFPage+Parsing.m */; };
+		2C7930F415B2DF2400308992 /* NSMPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E915B2DF2400308992 /* NSMPDFPage.m */; };
+		2C7930F615B2DF2400308992 /* NSMPDFParsingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930EC15B2DF2400308992 /* NSMPDFParsingFunctions.m */; };
+		2C7930F715B2DF2400308992 /* NSMPDFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930EE15B2DF2400308992 /* NSMPDFPath.m */; };
+		2C79310215B2E12100308992 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79310115B2E12100308992 /* CoreGraphics.framework */; };
+		2C79310815B2E24300308992 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79310715B2E24300308992 /* CoreText.framework */; };
+		2C79312D15B2E52D00308992 /* NSMPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930D415B2DEBD00308992 /* NSMPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79312E15B2E54600308992 /* NSMPDFContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930DE15B2DF2400308992 /* NSMPDFContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79312F15B2E54E00308992 /* NSMPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E015B2DF2400308992 /* NSMPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79313015B2E55C00308992 /* NSMPDFFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E215B2DF2400308992 /* NSMPDFFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79313115B2E56500308992 /* NSMPDFPage+Parsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E615B2DF2400308992 /* NSMPDFPage+Parsing.h */; };
+		2C79313215B2E56D00308992 /* NSMPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E815B2DF2400308992 /* NSMPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79313315B2E57600308992 /* NSMPDFMarkedSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E415B2DF2400308992 /* NSMPDFMarkedSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79313415B2E57D00308992 /* NSMPDFPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930ED15B2DF2400308992 /* NSMPDFPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79313C15B2FF2500308992 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313B15B2FF2500308992 /* Cocoa.framework */; };
+		2C79314615B2FF2500308992 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C79314415B2FF2500308992 /* InfoPlist.strings */; };
+		2C79314E15B2FF3500308992 /* NSMPDFContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930DE15B2DF2400308992 /* NSMPDFContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79314F15B2FF5500308992 /* NSMPDFContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930DF15B2DF2400308992 /* NSMPDFContext.m */; };
+		2C79315015B2FF5500308992 /* NSMPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E015B2DF2400308992 /* NSMPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79315115B2FF5500308992 /* NSMPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E115B2DF2400308992 /* NSMPDFDocument.m */; };
+		2C79315215B2FF5500308992 /* NSMPDFFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E215B2DF2400308992 /* NSMPDFFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79315315B2FF5500308992 /* NSMPDFFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E315B2DF2400308992 /* NSMPDFFont.m */; };
+		2C79315415B2FF5500308992 /* NSMPDFPage+Parsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E615B2DF2400308992 /* NSMPDFPage+Parsing.h */; };
+		2C79315515B2FF5500308992 /* NSMPDFPage+Parsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E715B2DF2400308992 /* NSMPDFPage+Parsing.m */; };
+		2C79315615B2FF5500308992 /* NSMPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E815B2DF2400308992 /* NSMPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79315715B2FF5500308992 /* NSMPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E915B2DF2400308992 /* NSMPDFPage.m */; };
+		2C79315815B2FF5500308992 /* NSMPDFParsingFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930EC15B2DF2400308992 /* NSMPDFParsingFunctions.m */; };
+		2C79315915B2FF5500308992 /* NSMPDFMarkedSequence.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930E415B2DF2400308992 /* NSMPDFMarkedSequence.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79315A15B2FF5500308992 /* NSMPDFMarkedSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E515B2DF2400308992 /* NSMPDFMarkedSequence.m */; };
+		2C79315B15B2FF5500308992 /* NSMPDFPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930ED15B2DF2400308992 /* NSMPDFPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79315C15B2FF5500308992 /* NSMPDFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930EE15B2DF2400308992 /* NSMPDFPath.m */; };
+		2C79317715B3006F00308992 /* NSMPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930D415B2DEBD00308992 /* NSMPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79317F15B31D7100308992 /* NSMPDFCGContextRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318015B31D7100308992 /* NSMPDFCGContextRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */; };
+		2C79318115B31FB800308992 /* NSMPDFRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317C15B31C5200308992 /* NSMPDFRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318215B31FBC00308992 /* NSMPDFRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317C15B31C5200308992 /* NSMPDFRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318315B31FC500308992 /* NSMPDFCGContextRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318415B31FCC00308992 /* NSMPDFCGContextRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */; };
+		2C79318A15B33B4800308992 /* NSMPDFShading.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79318815B33B4800308992 /* NSMPDFShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318B15B33B4800308992 /* NSMPDFShading.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79318815B33B4800308992 /* NSMPDFShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C79318C15B33B4800308992 /* NSMPDFShading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79318915B33B4800308992 /* NSMPDFShading.m */; };
+		2C79318D15B33B4800308992 /* NSMPDFShading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79318915B33B4800308992 /* NSMPDFShading.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2C01260515B365AB008A57BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7930C315B2DEBD00308992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C0125F315B3650B008A57BA;
+			remoteInfo = NSMPDFKitResources;
+		};
+		2C7930FE15B2E09E00308992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7930C315B2DEBD00308992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C7930CB15B2DEBD00308992;
+			remoteInfo = NSMPDF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C0125F415B3650B008A57BA /* NSMPDFKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSMPDFKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0125F515B3650B008A57BA /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		2C0125F915B3650B008A57BA /* NSMPDFKitResources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSMPDFKitResources-Info.plist"; sourceTree = "<group>"; };
+		2C0125FB15B3650B008A57BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C0125FD15B3650B008A57BA /* NSMPDFKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKitResources-Prefix.pch"; sourceTree = "<group>"; };
+		2C01260215B36595008A57BA /* glyphlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glyphlist.txt; sourceTree = "<group>"; };
+		2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSMPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C7930CF15B2DEBD00308992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C7930D315B2DEBD00308992 /* NSMPDFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKit-Prefix.pch"; sourceTree = "<group>"; };
+		2C7930D415B2DEBD00308992 /* NSMPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMPDFKit.h; sourceTree = "<group>"; };
+		2C7930DE15B2DF2400308992 /* NSMPDFContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFContext.h; sourceTree = "<group>"; };
+		2C7930DF15B2DF2400308992 /* NSMPDFContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFContext.m; sourceTree = "<group>"; };
+		2C7930E015B2DF2400308992 /* NSMPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFDocument.h; sourceTree = "<group>"; };
+		2C7930E115B2DF2400308992 /* NSMPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFDocument.m; sourceTree = "<group>"; };
+		2C7930E215B2DF2400308992 /* NSMPDFFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFFont.h; sourceTree = "<group>"; };
+		2C7930E315B2DF2400308992 /* NSMPDFFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFFont.m; sourceTree = "<group>"; };
+		2C7930E415B2DF2400308992 /* NSMPDFMarkedSequence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMarkedSequence.h; sourceTree = "<group>"; };
+		2C7930E515B2DF2400308992 /* NSMPDFMarkedSequence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMarkedSequence.m; sourceTree = "<group>"; };
+		2C7930E615B2DF2400308992 /* NSMPDFPage+Parsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMPDFPage+Parsing.h"; sourceTree = "<group>"; };
+		2C7930E715B2DF2400308992 /* NSMPDFPage+Parsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMPDFPage+Parsing.m"; sourceTree = "<group>"; };
+		2C7930E815B2DF2400308992 /* NSMPDFPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPage.h; sourceTree = "<group>"; };
+		2C7930E915B2DF2400308992 /* NSMPDFPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPage.m; sourceTree = "<group>"; };
+		2C7930EC15B2DF2400308992 /* NSMPDFParsingFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFParsingFunctions.m; sourceTree = "<group>"; };
+		2C7930ED15B2DF2400308992 /* NSMPDFPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPath.h; sourceTree = "<group>"; };
+		2C7930EE15B2DF2400308992 /* NSMPDFPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPath.m; sourceTree = "<group>"; };
+		2C79310115B2E12100308992 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2C79310715B2E24300308992 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		2C79313A15B2FF2500308992 /* NSMPDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NSMPDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C79313B15B2FF2500308992 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2C79313E15B2FF2500308992 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		2C79313F15B2FF2500308992 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2C79314015B2FF2500308992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2C79314315B2FF2500308992 /* NSMPDFKit-OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSMPDFKit-OSX-Info.plist"; sourceTree = "<group>"; };
+		2C79314515B2FF2500308992 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2C79314715B2FF2500308992 /* NSMPDFKit-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKit-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		2C79317C15B31C5200308992 /* NSMPDFRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSMPDFRenderer.h; sourceTree = "<group>"; };
+		2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFCGContextRenderer.h; sourceTree = "<group>"; };
+		2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFCGContextRenderer.m; sourceTree = "<group>"; };
+		2C79318815B33B4800308992 /* NSMPDFShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFShading.h; sourceTree = "<group>"; };
+		2C79318915B33B4800308992 /* NSMPDFShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFShading.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C0125F115B3650B008A57BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0125F615B3650B008A57BA /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C7930C915B2DEBD00308992 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79310815B2E24300308992 /* CoreText.framework in Frameworks */,
+				2C79310215B2E12100308992 /* CoreGraphics.framework in Frameworks */,
+				2C7930D015B2DEBD00308992 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C79313615B2FF2500308992 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79313C15B2FF2500308992 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2C0125F715B3650B008A57BA /* NSMPDFKitResources */ = {
+			isa = PBXGroup;
+			children = (
+				2C0125F815B3650B008A57BA /* Supporting Files */,
+			);
+			path = NSMPDFKitResources;
+			sourceTree = "<group>";
+		};
+		2C0125F815B3650B008A57BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C0125F915B3650B008A57BA /* NSMPDFKitResources-Info.plist */,
+				2C0125FA15B3650B008A57BA /* InfoPlist.strings */,
+				2C0125FD15B3650B008A57BA /* NSMPDFKitResources-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C01260115B36595008A57BA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C01260215B36595008A57BA /* glyphlist.txt */,
+			);
+			name = Resources;
+			path = NSMPDFKitResources/Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		2C7930C115B2DEBD00308992 = {
+			isa = PBXGroup;
+			children = (
+				2C7930D115B2DEBD00308992 /* NSMPDFKit */,
+				2C79314115B2FF2500308992 /* NSMPDFKit-OSX */,
+				2C0125F715B3650B008A57BA /* NSMPDFKitResources */,
+				2C7930CE15B2DEBD00308992 /* Frameworks */,
+				2C7930CD15B2DEBD00308992 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2C7930CD15B2DEBD00308992 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */,
+				2C79313A15B2FF2500308992 /* NSMPDFKit.framework */,
+				2C0125F415B3650B008A57BA /* NSMPDFKit.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2C7930CE15B2DEBD00308992 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C79310715B2E24300308992 /* CoreText.framework */,
+				2C79310115B2E12100308992 /* CoreGraphics.framework */,
+				2C7930CF15B2DEBD00308992 /* Foundation.framework */,
+				2C79313B15B2FF2500308992 /* Cocoa.framework */,
+				2C0125F515B3650B008A57BA /* CoreFoundation.framework */,
+				2C79313D15B2FF2500308992 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C7930D115B2DEBD00308992 /* NSMPDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				2C7930D415B2DEBD00308992 /* NSMPDFKit.h */,
+				2C7930DD15B2DF2400308992 /* Classes */,
+				2C7930D215B2DEBD00308992 /* Supporting Files */,
+			);
+			path = NSMPDFKit;
+			sourceTree = "<group>";
+		};
+		2C7930D215B2DEBD00308992 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C7930D315B2DEBD00308992 /* NSMPDFKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C7930DD15B2DF2400308992 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2C7930DE15B2DF2400308992 /* NSMPDFContext.h */,
+				2C7930DF15B2DF2400308992 /* NSMPDFContext.m */,
+				2C7930E015B2DF2400308992 /* NSMPDFDocument.h */,
+				2C7930E115B2DF2400308992 /* NSMPDFDocument.m */,
+				2C7930E815B2DF2400308992 /* NSMPDFPage.h */,
+				2C7930E915B2DF2400308992 /* NSMPDFPage.m */,
+				2C7930E615B2DF2400308992 /* NSMPDFPage+Parsing.h */,
+				2C7930E715B2DF2400308992 /* NSMPDFPage+Parsing.m */,
+				2C7930EC15B2DF2400308992 /* NSMPDFParsingFunctions.m */,
+				2C79317B15B31C3400308992 /* Renderers */,
+				2C7930F815B2DF2900308992 /* Objects */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C7930F815B2DF2900308992 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2C7930E215B2DF2400308992 /* NSMPDFFont.h */,
+				2C7930E315B2DF2400308992 /* NSMPDFFont.m */,
+				2C7930E415B2DF2400308992 /* NSMPDFMarkedSequence.h */,
+				2C7930E515B2DF2400308992 /* NSMPDFMarkedSequence.m */,
+				2C7930ED15B2DF2400308992 /* NSMPDFPath.h */,
+				2C7930EE15B2DF2400308992 /* NSMPDFPath.m */,
+				2C79318815B33B4800308992 /* NSMPDFShading.h */,
+				2C79318915B33B4800308992 /* NSMPDFShading.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		2C79313D15B2FF2500308992 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C79313E15B2FF2500308992 /* AppKit.framework */,
+				2C79313F15B2FF2500308992 /* CoreData.framework */,
+				2C79314015B2FF2500308992 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		2C79314115B2FF2500308992 /* NSMPDFKit-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				2C01260115B36595008A57BA /* Resources */,
+				2C79314215B2FF2500308992 /* Supporting Files */,
+			);
+			path = "NSMPDFKit-OSX";
+			sourceTree = "<group>";
+		};
+		2C79314215B2FF2500308992 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C79314315B2FF2500308992 /* NSMPDFKit-OSX-Info.plist */,
+				2C79314415B2FF2500308992 /* InfoPlist.strings */,
+				2C79314715B2FF2500308992 /* NSMPDFKit-OSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C79317B15B31C3400308992 /* Renderers */ = {
+			isa = PBXGroup;
+			children = (
+				2C79317C15B31C5200308992 /* NSMPDFRenderer.h */,
+				2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */,
+				2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */,
+			);
+			name = Renderers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2C79311B15B2E49200308992 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79312D15B2E52D00308992 /* NSMPDFKit.h in Headers */,
+				2C79312E15B2E54600308992 /* NSMPDFContext.h in Headers */,
+				2C79312F15B2E54E00308992 /* NSMPDFDocument.h in Headers */,
+				2C79313015B2E55C00308992 /* NSMPDFFont.h in Headers */,
+				2C79313115B2E56500308992 /* NSMPDFPage+Parsing.h in Headers */,
+				2C79313215B2E56D00308992 /* NSMPDFPage.h in Headers */,
+				2C79313315B2E57600308992 /* NSMPDFMarkedSequence.h in Headers */,
+				2C79313415B2E57D00308992 /* NSMPDFPath.h in Headers */,
+				2C79317F15B31D7100308992 /* NSMPDFCGContextRenderer.h in Headers */,
+				2C79318115B31FB800308992 /* NSMPDFRenderer.h in Headers */,
+				2C79318A15B33B4800308992 /* NSMPDFShading.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C79313715B2FF2500308992 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79314E15B2FF3500308992 /* NSMPDFContext.h in Headers */,
+				2C79315015B2FF5500308992 /* NSMPDFDocument.h in Headers */,
+				2C79315215B2FF5500308992 /* NSMPDFFont.h in Headers */,
+				2C79315415B2FF5500308992 /* NSMPDFPage+Parsing.h in Headers */,
+				2C79315615B2FF5500308992 /* NSMPDFPage.h in Headers */,
+				2C79315915B2FF5500308992 /* NSMPDFMarkedSequence.h in Headers */,
+				2C79315B15B2FF5500308992 /* NSMPDFPath.h in Headers */,
+				2C79317715B3006F00308992 /* NSMPDFKit.h in Headers */,
+				2C79318215B31FBC00308992 /* NSMPDFRenderer.h in Headers */,
+				2C79318315B31FC500308992 /* NSMPDFCGContextRenderer.h in Headers */,
+				2C79318B15B33B4800308992 /* NSMPDFShading.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2C0125F315B3650B008A57BA /* NSMPDFKitResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C0125FE15B3650B008A57BA /* Build configuration list for PBXNativeTarget "NSMPDFKitResources" */;
+			buildPhases = (
+				2C0125F015B3650B008A57BA /* Sources */,
+				2C0125F115B3650B008A57BA /* Frameworks */,
+				2C0125F215B3650B008A57BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSMPDFKitResources;
+			productName = NSMPDFKitResources;
+			productReference = 2C0125F415B3650B008A57BA /* NSMPDFKit.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		2C7930CB15B2DEBD00308992 /* NSMPDFKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C7930DA15B2DEBD00308992 /* Build configuration list for PBXNativeTarget "NSMPDFKit" */;
+			buildPhases = (
+				2C7930C815B2DEBD00308992 /* Sources */,
+				2C7930C915B2DEBD00308992 /* Frameworks */,
+				2C79311B15B2E49200308992 /* Headers */,
+				2C7930F915B2E06E00308992 /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSMPDFKit;
+			productName = NSMPDF;
+			productReference = 2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2C79313915B2FF2500308992 /* NSMPDFKit-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C79314B15B2FF2500308992 /* Build configuration list for PBXNativeTarget "NSMPDFKit-OSX" */;
+			buildPhases = (
+				2C79313515B2FF2500308992 /* Sources */,
+				2C79313615B2FF2500308992 /* Frameworks */,
+				2C79313715B2FF2500308992 /* Headers */,
+				2C79313815B2FF2500308992 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSMPDFKit-OSX";
+			productName = "NSMPDF-OSX";
+			productReference = 2C79313A15B2FF2500308992 /* NSMPDFKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2C7930C315B2DEBD00308992 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = nesiumdotcom;
+			};
+			buildConfigurationList = 2C7930C615B2DEBD00308992 /* Build configuration list for PBXProject "NSMPDFKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2C7930C115B2DEBD00308992;
+			productRefGroup = 2C7930CD15B2DEBD00308992 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C7930CB15B2DEBD00308992 /* NSMPDFKit */,
+				2C7930FA15B2E09600308992 /* NSMPDFKitFramework */,
+				2C0125F315B3650B008A57BA /* NSMPDFKitResources */,
+				2C79313915B2FF2500308992 /* NSMPDFKit-OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2C0125F215B3650B008A57BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C0125FC15B3650B008A57BA /* InfoPlist.strings in Resources */,
+				2C01260315B36595008A57BA /* glyphlist.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C79313815B2FF2500308992 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79314615B2FF2500308992 /* InfoPlist.strings in Resources */,
+				2C01260415B36595008A57BA /* glyphlist.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C7930F915B2E06E00308992 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"\n\n# Link the \"Current\" version to \"A\"\n/bin/ln -sfh A \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/${PRODUCT_NAME}\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework/Versions/A/Headers\"";
+		};
+		2C79310015B2E0C800308992 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\n    exit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    SF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    SF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    SF_OTHER_PLATFORM=iphonesimulator\nelse\n    SF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\n    SF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/A/${SF_TARGET_NAME}\"\n\nopen \"${SF_OTHER_BUILT_PRODUCTS_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C0125F015B3650B008A57BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C7930C815B2DEBD00308992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C7930EF15B2DF2400308992 /* NSMPDFContext.m in Sources */,
+				2C7930F015B2DF2400308992 /* NSMPDFDocument.m in Sources */,
+				2C7930F115B2DF2400308992 /* NSMPDFFont.m in Sources */,
+				2C7930F215B2DF2400308992 /* NSMPDFMarkedSequence.m in Sources */,
+				2C7930F315B2DF2400308992 /* NSMPDFPage+Parsing.m in Sources */,
+				2C7930F415B2DF2400308992 /* NSMPDFPage.m in Sources */,
+				2C7930F615B2DF2400308992 /* NSMPDFParsingFunctions.m in Sources */,
+				2C7930F715B2DF2400308992 /* NSMPDFPath.m in Sources */,
+				2C79318015B31D7100308992 /* NSMPDFCGContextRenderer.m in Sources */,
+				2C79318C15B33B4800308992 /* NSMPDFShading.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C79313515B2FF2500308992 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C79314F15B2FF5500308992 /* NSMPDFContext.m in Sources */,
+				2C79315115B2FF5500308992 /* NSMPDFDocument.m in Sources */,
+				2C79315315B2FF5500308992 /* NSMPDFFont.m in Sources */,
+				2C79315515B2FF5500308992 /* NSMPDFPage+Parsing.m in Sources */,
+				2C79315715B2FF5500308992 /* NSMPDFPage.m in Sources */,
+				2C79315815B2FF5500308992 /* NSMPDFParsingFunctions.m in Sources */,
+				2C79315A15B2FF5500308992 /* NSMPDFMarkedSequence.m in Sources */,
+				2C79315C15B2FF5500308992 /* NSMPDFPath.m in Sources */,
+				2C79318415B31FCC00308992 /* NSMPDFCGContextRenderer.m in Sources */,
+				2C79318D15B33B4800308992 /* NSMPDFShading.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C01260615B365AB008A57BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C0125F315B3650B008A57BA /* NSMPDFKitResources */;
+			targetProxy = 2C01260515B365AB008A57BA /* PBXContainerItemProxy */;
+		};
+		2C7930FF15B2E09E00308992 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C7930CB15B2DEBD00308992 /* NSMPDFKit */;
+			targetProxy = 2C7930FE15B2E09E00308992 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2C0125FA15B3650B008A57BA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C0125FB15B3650B008A57BA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2C79314415B2FF2500308992 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C79314515B2FF2500308992 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2C0125FF15B3650B008A57BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKitResources/NSMPDFKitResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "NSMPDFKitResources/NSMPDFKitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = NSMPDFKit;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		2C01260015B3650B008A57BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKitResources/NSMPDFKitResources-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "NSMPDFKitResources/NSMPDFKitResources-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = NSMPDFKit;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		2C7930D815B2DEBD00308992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2C7930D915B2DEBD00308992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C7930DB15B2DEBD00308992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/NSMPDFKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKit/NSMPDFKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = NSMPDFKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		2C7930DC15B2DEBD00308992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/NSMPDFKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKit/NSMPDFKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = NSMPDFKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "$(PROJECT_NAME)Headers";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		2C7930FC15B2E09600308992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C7930FD15B2E09600308992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2C79314C15B2FF2500308992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKit-OSX/NSMPDFKit-OSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "NSMPDFKit-OSX/NSMPDFKit-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = NSMPDFKit;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		2C79314D15B2FF2500308992 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP2.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSMPDFKit-OSX/NSMPDFKit-OSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "NSMPDFKit-OSX/NSMPDFKit-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = NSMPDFKit;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C0125FE15B3650B008A57BA /* Build configuration list for PBXNativeTarget "NSMPDFKitResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C0125FF15B3650B008A57BA /* Debug */,
+				2C01260015B3650B008A57BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2C7930C615B2DEBD00308992 /* Build configuration list for PBXProject "NSMPDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C7930D815B2DEBD00308992 /* Debug */,
+				2C7930D915B2DEBD00308992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C7930DA15B2DEBD00308992 /* Build configuration list for PBXNativeTarget "NSMPDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C7930DB15B2DEBD00308992 /* Debug */,
+				2C7930DC15B2DEBD00308992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C7930FB15B2E09600308992 /* Build configuration list for PBXAggregateTarget "NSMPDFKitFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C7930FC15B2E09600308992 /* Debug */,
+				2C7930FD15B2E09600308992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C79314B15B2FF2500308992 /* Build configuration list for PBXNativeTarget "NSMPDFKit-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C79314C15B2FF2500308992 /* Debug */,
+				2C79314D15B2FF2500308992 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2C7930C315B2DEBD00308992 /* Project object */;
+}
