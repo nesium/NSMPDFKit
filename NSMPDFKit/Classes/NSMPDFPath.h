@@ -10,7 +10,5 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 @interface NSMPDFPath : NSObject
-@property (nonatomic, strong) __attribute__((NSObject)) CGColorRef fillColor;
-@property (nonatomic, strong) __attribute__((NSObject)) CGColorRef strokeColor;
 @property (nonatomic, retain) __attribute__((NSObject)) CGPathRef path;
 @end

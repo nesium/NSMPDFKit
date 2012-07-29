@@ -89,6 +89,49 @@
 		2CDBA7E715C55DCD004221FD /* NSMUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7E515C55DCD004221FD /* NSMUIGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CDBA7E815C55DCD004221FD /* NSMUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7E615C55DCD004221FD /* NSMUIGeometry.m */; };
 		2CDBA7EF15C55E69004221FD /* NSMPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7EE15C55E69004221FD /* NSMPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7F215C564D1004221FD /* NSMPDFTreeRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7F015C564D1004221FD /* NSMPDFTreeRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7F315C564D1004221FD /* NSMPDFTreeRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7F015C564D1004221FD /* NSMPDFTreeRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7F415C564D1004221FD /* NSMPDFTreeRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7F115C564D1004221FD /* NSMPDFTreeRenderer.m */; };
+		2CDBA7F515C564D1004221FD /* NSMPDFTreeRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7F115C564D1004221FD /* NSMPDFTreeRenderer.m */; };
+		2CDBA7FA15C569B4004221FD /* NSMPDFTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7F815C569B4004221FD /* NSMPDFTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7FB15C569B4004221FD /* NSMPDFTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7F815C569B4004221FD /* NSMPDFTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7FC15C569B4004221FD /* NSMPDFTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7F915C569B4004221FD /* NSMPDFTreeNode.m */; };
+		2CDBA7FD15C569B4004221FD /* NSMPDFTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7F915C569B4004221FD /* NSMPDFTreeNode.m */; };
+		2CDBA80115C569E4004221FD /* NSMPDFMutableTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7FF15C569E4004221FD /* NSMPDFMutableTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80215C569E4004221FD /* NSMPDFMutableTreeNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7FF15C569E4004221FD /* NSMPDFMutableTreeNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80315C569E4004221FD /* NSMPDFMutableTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80015C569E4004221FD /* NSMPDFMutableTreeNode.m */; };
+		2CDBA80415C569E4004221FD /* NSMPDFMutableTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80015C569E4004221FD /* NSMPDFMutableTreeNode.m */; };
+		2CDBA80715C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA80515C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80815C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA80515C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80915C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80615C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m */; };
+		2CDBA80A15C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80615C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m */; };
+		2CDBA80D15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA80B15C56BE9004221FD /* NSMPDFTaggedContentNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80E15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA80B15C56BE9004221FD /* NSMPDFTaggedContentNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA80F15C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80C15C56BE9004221FD /* NSMPDFTaggedContentNode.m */; };
+		2CDBA81015C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA80C15C56BE9004221FD /* NSMPDFTaggedContentNode.m */; };
+		2CDBA81315C56D24004221FD /* NSMPDFPathNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA81115C56D24004221FD /* NSMPDFPathNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA81415C56D24004221FD /* NSMPDFPathNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA81115C56D24004221FD /* NSMPDFPathNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA81515C56D24004221FD /* NSMPDFPathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */; };
+		2CDBA81615C56D24004221FD /* NSMPDFPathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */; };
+		2CDBA81915C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA81A15C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA81B15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */; };
+		2CDBA81C15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */; };
+		2CDBA83C15C570A5004221FD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313B15B2FF2500308992 /* Cocoa.framework */; };
+		2CDBA84215C570A5004221FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA84015C570A5004221FD /* InfoPlist.strings */; };
+		2CDBA84415C570A5004221FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA84315C570A5004221FD /* main.m */; };
+		2CDBA84815C570A5004221FD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA84615C570A5004221FD /* Credits.rtf */; };
+		2CDBA85E15C57102004221FD /* InfoPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA85515C57102004221FD /* InfoPanel.xib */; };
+		2CDBA85F15C57102004221FD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA85715C57102004221FD /* InfoPlist.strings */; };
+		2CDBA86015C57102004221FD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA85915C57102004221FD /* MainMenu.xib */; };
+		2CDBA86115C57102004221FD /* NSMDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA85B15C57102004221FD /* NSMDocument.xib */; };
+		2CDBA86B15C57114004221FD /* NSMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA86415C57114004221FD /* NSMAppDelegate.m */; };
+		2CDBA86C15C57114004221FD /* NSMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA86615C57114004221FD /* NSMDocument.m */; };
+		2CDBA86D15C57114004221FD /* NSMInfoPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA86815C57114004221FD /* NSMInfoPanelController.m */; };
+		2CDBA86E15C57114004221FD /* NSMPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA86A15C57114004221FD /* NSMPDFPageView.m */; };
+		2CDBA86F15C57147004221FD /* NSMPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313A15B2FF2500308992 /* NSMPDFKit.framework */; };
+		2CDBA87415C571BE004221FD /* OutlinePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA87215C571BE004221FD /* OutlinePanel.xib */; };
+		2CDBA87715C572F4004221FD /* NSMOutlinePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +150,13 @@
 			remoteInfo = NSMPDF;
 		};
 		2CAF77EC15C555880076C4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7930C315B2DEBD00308992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C79313915B2FF2500308992;
+			remoteInfo = "NSMPDFKit-OSX";
+		};
+		2CDBA87015C5714E004221FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2C7930C315B2DEBD00308992 /* Project object */;
 			proxyType = 1;
@@ -178,6 +228,43 @@
 		2CDBA7E515C55DCD004221FD /* NSMUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMUIGeometry.h; sourceTree = "<group>"; };
 		2CDBA7E615C55DCD004221FD /* NSMUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMUIGeometry.m; sourceTree = "<group>"; };
 		2CDBA7EE15C55E69004221FD /* NSMPDFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFKit.h; sourceTree = "<group>"; };
+		2CDBA7F015C564D1004221FD /* NSMPDFTreeRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFTreeRenderer.h; sourceTree = "<group>"; };
+		2CDBA7F115C564D1004221FD /* NSMPDFTreeRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFTreeRenderer.m; sourceTree = "<group>"; };
+		2CDBA7F815C569B4004221FD /* NSMPDFTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFTreeNode.h; sourceTree = "<group>"; };
+		2CDBA7F915C569B4004221FD /* NSMPDFTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFTreeNode.m; sourceTree = "<group>"; };
+		2CDBA7FF15C569E4004221FD /* NSMPDFMutableTreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMutableTreeNode.h; sourceTree = "<group>"; };
+		2CDBA80015C569E4004221FD /* NSMPDFMutableTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMutableTreeNode.m; sourceTree = "<group>"; };
+		2CDBA80515C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMutableTaggedContentNode.h; sourceTree = "<group>"; };
+		2CDBA80615C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMutableTaggedContentNode.m; sourceTree = "<group>"; };
+		2CDBA80B15C56BE9004221FD /* NSMPDFTaggedContentNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFTaggedContentNode.h; sourceTree = "<group>"; };
+		2CDBA80C15C56BE9004221FD /* NSMPDFTaggedContentNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFTaggedContentNode.m; sourceTree = "<group>"; };
+		2CDBA81115C56D24004221FD /* NSMPDFPathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPathNode.h; sourceTree = "<group>"; };
+		2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPathNode.m; sourceTree = "<group>"; };
+		2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMutablePathNode.h; sourceTree = "<group>"; };
+		2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMutablePathNode.m; sourceTree = "<group>"; };
+		2CDBA83515C5708F004221FD /* DemoApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DemoApp copy-Info.plist"; path = "/Users/mb/Desktop/MeToo/NSMPDFKit/DemoApp copy-Info.plist"; sourceTree = "<absolute>"; };
+		2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeDemoAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CDBA83F15C570A5004221FD /* TreeDemoAPP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TreeDemoAPP-Info.plist"; sourceTree = "<group>"; };
+		2CDBA84115C570A5004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CDBA84315C570A5004221FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CDBA84515C570A5004221FD /* TreeDemoAPP-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TreeDemoAPP-Prefix.pch"; sourceTree = "<group>"; };
+		2CDBA84715C570A5004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2CDBA85415C57102004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		2CDBA85615C57102004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/InfoPanel.xib; sourceTree = "<group>"; };
+		2CDBA85815C57102004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CDBA85A15C57102004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		2CDBA85C15C57102004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NSMDocument.xib; sourceTree = "<group>"; };
+		2CDBA86315C57114004221FD /* NSMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMAppDelegate.h; sourceTree = "<group>"; };
+		2CDBA86415C57114004221FD /* NSMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMAppDelegate.m; sourceTree = "<group>"; };
+		2CDBA86515C57114004221FD /* NSMDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMDocument.h; sourceTree = "<group>"; };
+		2CDBA86615C57114004221FD /* NSMDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMDocument.m; sourceTree = "<group>"; };
+		2CDBA86715C57114004221FD /* NSMInfoPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMInfoPanelController.h; sourceTree = "<group>"; };
+		2CDBA86815C57114004221FD /* NSMInfoPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMInfoPanelController.m; sourceTree = "<group>"; };
+		2CDBA86915C57114004221FD /* NSMPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPageView.h; sourceTree = "<group>"; };
+		2CDBA86A15C57114004221FD /* NSMPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPageView.m; sourceTree = "<group>"; };
+		2CDBA87315C571BE004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OutlinePanel.xib; sourceTree = "<group>"; };
+		2CDBA87515C572F4004221FD /* NSMOutlinePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMOutlinePanelController.h; sourceTree = "<group>"; };
+		2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMOutlinePanelController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +300,15 @@
 			files = (
 				2CAF77EE15C5558F0076C4EB /* NSMPDFKit.framework in Frameworks */,
 				2CAF77B815C554390076C4EB /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDBA83715C570A5004221FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDBA86F15C57147004221FD /* NSMPDFKit.framework in Frameworks */,
+				2CDBA83C15C570A5004221FD /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +349,10 @@
 				2C79314115B2FF2500308992 /* NSMPDFKit-OSX */,
 				2C0125F715B3650B008A57BA /* NSMPDFKitResources */,
 				2CAF77B915C554390076C4EB /* DemoApp */,
+				2CDBA83D15C570A5004221FD /* TreeDemoAPP */,
 				2C7930CE15B2DEBD00308992 /* Frameworks */,
 				2C7930CD15B2DEBD00308992 /* Products */,
+				2CDBA83515C5708F004221FD /* DemoApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -265,6 +363,7 @@
 				2C79313A15B2FF2500308992 /* NSMPDFKit.framework */,
 				2C0125F415B3650B008A57BA /* NSMPDFKit.bundle */,
 				2CAF77B615C554390076C4EB /* DemoApp.app */,
+				2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +420,7 @@
 		2C7930F815B2DF2900308992 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				2CDBA7F615C5697B004221FD /* Nodes */,
 				2C7930E215B2DF2400308992 /* NSMPDFFont.h */,
 				2C7930E315B2DF2400308992 /* NSMPDFFont.m */,
 				2C7930E415B2DF2400308992 /* NSMPDFMarkedSequence.h */,
@@ -370,6 +470,8 @@
 				2C79317C15B31C5200308992 /* NSMPDFRenderer.h */,
 				2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */,
 				2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */,
+				2CDBA7F015C564D1004221FD /* NSMPDFTreeRenderer.h */,
+				2CDBA7F115C564D1004221FD /* NSMPDFTreeRenderer.m */,
 			);
 			name = Renderers;
 			sourceTree = "<group>";
@@ -432,6 +534,93 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		2CDBA7F615C5697B004221FD /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA7F715C569A0004221FD /* Immutable */,
+				2CDBA7FE15C569C9004221FD /* Mutable */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		2CDBA7F715C569A0004221FD /* Immutable */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA7F815C569B4004221FD /* NSMPDFTreeNode.h */,
+				2CDBA7F915C569B4004221FD /* NSMPDFTreeNode.m */,
+				2CDBA80B15C56BE9004221FD /* NSMPDFTaggedContentNode.h */,
+				2CDBA80C15C56BE9004221FD /* NSMPDFTaggedContentNode.m */,
+				2CDBA81115C56D24004221FD /* NSMPDFPathNode.h */,
+				2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */,
+			);
+			name = Immutable;
+			sourceTree = "<group>";
+		};
+		2CDBA7FE15C569C9004221FD /* Mutable */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA7FF15C569E4004221FD /* NSMPDFMutableTreeNode.h */,
+				2CDBA80015C569E4004221FD /* NSMPDFMutableTreeNode.m */,
+				2CDBA80515C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h */,
+				2CDBA80615C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m */,
+				2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */,
+				2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */,
+			);
+			name = Mutable;
+			sourceTree = "<group>";
+		};
+		2CDBA83D15C570A5004221FD /* TreeDemoAPP */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA86215C57114004221FD /* Classes */,
+				2CDBA85215C570F7004221FD /* Resources */,
+				2CDBA83E15C570A5004221FD /* Supporting Files */,
+			);
+			path = TreeDemoAPP;
+			sourceTree = "<group>";
+		};
+		2CDBA83E15C570A5004221FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA83F15C570A5004221FD /* TreeDemoAPP-Info.plist */,
+				2CDBA84015C570A5004221FD /* InfoPlist.strings */,
+				2CDBA84315C570A5004221FD /* main.m */,
+				2CDBA84515C570A5004221FD /* TreeDemoAPP-Prefix.pch */,
+				2CDBA84615C570A5004221FD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CDBA85215C570F7004221FD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA85315C57102004221FD /* Credits.rtf */,
+				2CDBA85515C57102004221FD /* InfoPanel.xib */,
+				2CDBA85715C57102004221FD /* InfoPlist.strings */,
+				2CDBA85915C57102004221FD /* MainMenu.xib */,
+				2CDBA85B15C57102004221FD /* NSMDocument.xib */,
+				2CDBA87215C571BE004221FD /* OutlinePanel.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2CDBA86215C57114004221FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA86315C57114004221FD /* NSMAppDelegate.h */,
+				2CDBA86415C57114004221FD /* NSMAppDelegate.m */,
+				2CDBA86515C57114004221FD /* NSMDocument.h */,
+				2CDBA86615C57114004221FD /* NSMDocument.m */,
+				2CDBA86715C57114004221FD /* NSMInfoPanelController.h */,
+				2CDBA86815C57114004221FD /* NSMInfoPanelController.m */,
+				2CDBA86915C57114004221FD /* NSMPDFPageView.h */,
+				2CDBA86A15C57114004221FD /* NSMPDFPageView.m */,
+				2CDBA87515C572F4004221FD /* NSMOutlinePanelController.h */,
+				2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -450,6 +639,13 @@
 				2C79317F15B31D7100308992 /* NSMPDFCGContextRenderer.h in Headers */,
 				2C79318115B31FB800308992 /* NSMPDFRenderer.h in Headers */,
 				2C79318A15B33B4800308992 /* NSMPDFShading.h in Headers */,
+				2CDBA7F215C564D1004221FD /* NSMPDFTreeRenderer.h in Headers */,
+				2CDBA7FA15C569B4004221FD /* NSMPDFTreeNode.h in Headers */,
+				2CDBA80115C569E4004221FD /* NSMPDFMutableTreeNode.h in Headers */,
+				2CDBA80715C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h in Headers */,
+				2CDBA80D15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */,
+				2CDBA81315C56D24004221FD /* NSMPDFPathNode.h in Headers */,
+				2CDBA81915C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +665,13 @@
 				2C79318B15B33B4800308992 /* NSMPDFShading.h in Headers */,
 				2CDBA7E715C55DCD004221FD /* NSMUIGeometry.h in Headers */,
 				2CDBA7EF15C55E69004221FD /* NSMPDFKit.h in Headers */,
+				2CDBA7F315C564D1004221FD /* NSMPDFTreeRenderer.h in Headers */,
+				2CDBA7FB15C569B4004221FD /* NSMPDFTreeNode.h in Headers */,
+				2CDBA80215C569E4004221FD /* NSMPDFMutableTreeNode.h in Headers */,
+				2CDBA80815C56B6A004221FD /* NSMPDFMutableTaggedContentNode.h in Headers */,
+				2CDBA80E15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */,
+				2CDBA81415C56D24004221FD /* NSMPDFPathNode.h in Headers */,
+				2CDBA81A15C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +749,24 @@
 			productReference = 2CAF77B615C554390076C4EB /* DemoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CDBA83915C570A5004221FD /* TreeDemoAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CDBA84F15C570A5004221FD /* Build configuration list for PBXNativeTarget "TreeDemoAPP" */;
+			buildPhases = (
+				2CDBA83615C570A5004221FD /* Sources */,
+				2CDBA83715C570A5004221FD /* Frameworks */,
+				2CDBA83815C570A5004221FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CDBA87115C5714E004221FD /* PBXTargetDependency */,
+			);
+			name = TreeDemoAPP;
+			productName = TreeDemoAPP;
+			productReference = 2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -572,6 +793,7 @@
 				2C0125F315B3650B008A57BA /* NSMPDFKitResources */,
 				2C79313915B2FF2500308992 /* NSMPDFKit-OSX */,
 				2CAF77B515C554390076C4EB /* DemoApp */,
+				2CDBA83915C570A5004221FD /* TreeDemoAPP */,
 			);
 		};
 /* End PBXProject section */
@@ -605,6 +827,20 @@
 				2CAF77E915C5552B0076C4EB /* InfoPlist.strings in Resources */,
 				2CAF77EA15C5552B0076C4EB /* MainMenu.xib in Resources */,
 				2CAF77EB15C5552B0076C4EB /* NSMDocument.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDBA83815C570A5004221FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDBA84215C570A5004221FD /* InfoPlist.strings in Resources */,
+				2CDBA84815C570A5004221FD /* Credits.rtf in Resources */,
+				2CDBA85E15C57102004221FD /* InfoPanel.xib in Resources */,
+				2CDBA85F15C57102004221FD /* InfoPlist.strings in Resources */,
+				2CDBA86015C57102004221FD /* MainMenu.xib in Resources */,
+				2CDBA86115C57102004221FD /* NSMDocument.xib in Resources */,
+				2CDBA87415C571BE004221FD /* OutlinePanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +899,13 @@
 				2C7930F715B2DF2400308992 /* NSMPDFPath.m in Sources */,
 				2C79318015B31D7100308992 /* NSMPDFCGContextRenderer.m in Sources */,
 				2C79318C15B33B4800308992 /* NSMPDFShading.m in Sources */,
+				2CDBA7F415C564D1004221FD /* NSMPDFTreeRenderer.m in Sources */,
+				2CDBA7FC15C569B4004221FD /* NSMPDFTreeNode.m in Sources */,
+				2CDBA80315C569E4004221FD /* NSMPDFMutableTreeNode.m in Sources */,
+				2CDBA80915C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m in Sources */,
+				2CDBA80F15C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */,
+				2CDBA81515C56D24004221FD /* NSMPDFPathNode.m in Sources */,
+				2CDBA81B15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +924,13 @@
 				2C79318415B31FCC00308992 /* NSMPDFCGContextRenderer.m in Sources */,
 				2C79318D15B33B4800308992 /* NSMPDFShading.m in Sources */,
 				2CDBA7E815C55DCD004221FD /* NSMUIGeometry.m in Sources */,
+				2CDBA7F515C564D1004221FD /* NSMPDFTreeRenderer.m in Sources */,
+				2CDBA7FD15C569B4004221FD /* NSMPDFTreeNode.m in Sources */,
+				2CDBA80415C569E4004221FD /* NSMPDFMutableTreeNode.m in Sources */,
+				2CDBA80A15C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m in Sources */,
+				2CDBA81015C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */,
+				2CDBA81615C56D24004221FD /* NSMPDFPathNode.m in Sources */,
+				2CDBA81C15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +943,19 @@
 				2CAF77D915C554F90076C4EB /* NSMDocument.m in Sources */,
 				2CAF77DA15C554F90076C4EB /* NSMInfoPanelController.m in Sources */,
 				2CAF77DB15C554F90076C4EB /* NSMPDFPageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CDBA83615C570A5004221FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CDBA84415C570A5004221FD /* main.m in Sources */,
+				2CDBA86B15C57114004221FD /* NSMAppDelegate.m in Sources */,
+				2CDBA86C15C57114004221FD /* NSMDocument.m in Sources */,
+				2CDBA86D15C57114004221FD /* NSMInfoPanelController.m in Sources */,
+				2CDBA86E15C57114004221FD /* NSMPDFPageView.m in Sources */,
+				2CDBA87715C572F4004221FD /* NSMOutlinePanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +976,11 @@
 			isa = PBXTargetDependency;
 			target = 2C79313915B2FF2500308992 /* NSMPDFKit-OSX */;
 			targetProxy = 2CAF77EC15C555880076C4EB /* PBXContainerItemProxy */;
+		};
+		2CDBA87115C5714E004221FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C79313915B2FF2500308992 /* NSMPDFKit-OSX */;
+			targetProxy = 2CDBA87015C5714E004221FD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,6 +1055,70 @@
 				2CAF77E615C5552B0076C4EB /* en */,
 			);
 			name = NSMDocument.xib;
+			sourceTree = "<group>";
+		};
+		2CDBA84015C570A5004221FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA84115C570A5004221FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CDBA84615C570A5004221FD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA84715C570A5004221FD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2CDBA85315C57102004221FD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA85415C57102004221FD /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		2CDBA85515C57102004221FD /* InfoPanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA85615C57102004221FD /* en */,
+			);
+			name = InfoPanel.xib;
+			sourceTree = "<group>";
+		};
+		2CDBA85715C57102004221FD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA85815C57102004221FD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CDBA85915C57102004221FD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA85A15C57102004221FD /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2CDBA85B15C57102004221FD /* NSMDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA85C15C57102004221FD /* en */,
+			);
+			name = NSMDocument.xib;
+			sourceTree = "<group>";
+		};
+		2CDBA87215C571BE004221FD /* OutlinePanel.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CDBA87315C571BE004221FD /* en */,
+			);
+			name = OutlinePanel.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1017,6 +1349,52 @@
 			};
 			name = Release;
 		};
+		2CDBA85015C570A5004221FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP3.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TreeDemoAPP/TreeDemoAPP-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "TreeDemoAPP/TreeDemoAPP-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2CDBA85115C570A5004221FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP3.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TreeDemoAPP/TreeDemoAPP-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "TreeDemoAPP/TreeDemoAPP-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1073,6 +1451,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2CDBA84F15C570A5004221FD /* Build configuration list for PBXNativeTarget "TreeDemoAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CDBA85015C570A5004221FD /* Debug */,
+				2CDBA85115C570A5004221FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
