@@ -14,6 +14,9 @@
 
 @implementation NSMPDFPage
 
+@synthesize artBox = _artBox, bleedBox = _bleedBox, cropBox = _cropBox, mediaBox = _mediaBox,
+	trimBox = _trimBox;
+
 #pragma mark - Initialization & Deallocation
 
 - (id)initWithPage:(CGPDFPageRef)page index:(NSUInteger)index
@@ -27,6 +30,8 @@
         _colorSpaces = NULL;
         _shadings = NULL;
         _loadedFonts = nil;
+        
+        [self parseProperties];
 	}
 	return self;
 }

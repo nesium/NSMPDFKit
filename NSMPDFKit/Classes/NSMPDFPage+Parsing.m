@@ -21,13 +21,39 @@
 	return _renderer;
 }
 
+- (void)parseProperties
+{
+	CGPDFDictionaryRef pageDict;
+	pageDict = CGPDFPageGetDictionary(_page);
+    
+    CGRect (^rectForKey)(char const *) = ^CGRect (char const *key) {
+    	CGPDFArrayRef arr;
+    	if (!CGPDFDictionaryGetArray(pageDict, key, &arr)) {
+        	return CGRectZero;
+        }
+    	CGRect aRect;
+        CGPDFArrayGetNumber(arr, 0, &aRect.origin.x);
+        CGPDFArrayGetNumber(arr, 1, &aRect.origin.y);
+        CGPDFArrayGetNumber(arr, 2, &aRect.size.width);
+        CGPDFArrayGetNumber(arr, 3, &aRect.size.height);
+        return aRect;
+    };
+    
+    _artBox = rectForKey("ArtBox");
+    _bleedBox = rectForKey("BleedBox");
+    _cropBox = rectForKey("CropBox");
+    _mediaBox = rectForKey("MediaBox");
+    _trimBox = rectForKey("TrimBox");
+}
+
 - (void)parseResources
 {
 	CGPDFDictionaryRef pageDict, resourceDict;
 	pageDict = CGPDFPageGetDictionary(_page);
+    
 	if (!CGPDFDictionaryGetDictionary(pageDict, "Resources", &resourceDict))
 		return;
-	
+    
 	CGPDFDictionaryRef xObjects;
 	if (CGPDFDictionaryGetDictionary(resourceDict, "XObject", &xObjects)) {
 		_xObjects = xObjects;

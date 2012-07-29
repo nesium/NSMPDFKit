@@ -52,16 +52,6 @@ NSString *const NSMDocumentBecameMainNotification = @"NSMDocumentBecameMainNotif
 
 
 
-#pragma mark - Action methods
-
-- (void)toggleClipping:(id)sender
-{
-	_clippingEnabled = !_clippingEnabled;
-	[self applyPage];
-}
-
-
-
 #pragma mark - NSWindowDelegate methods
 
 - (void)windowDidBecomeMain:(NSNotification *)notification
@@ -77,6 +67,7 @@ NSString *const NSMDocumentBecameMainNotification = @"NSMDocumentBecameMainNotif
 - (void)applyPage
 {
     NSMPDFPage *page = [pdfDocument.pages objectAtIndex:0];
+    _pdfPageView.frame = page.mediaBox;
     _pdfPageView.page = page;
 }
 @end

@@ -63,7 +63,6 @@
 		2C79315A15B2FF5500308992 /* NSMPDFMarkedSequence.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E515B2DF2400308992 /* NSMPDFMarkedSequence.m */; };
 		2C79315B15B2FF5500308992 /* NSMPDFPath.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930ED15B2DF2400308992 /* NSMPDFPath.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C79315C15B2FF5500308992 /* NSMPDFPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930EE15B2DF2400308992 /* NSMPDFPath.m */; };
-		2C79317715B3006F00308992 /* NSMPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C7930D415B2DEBD00308992 /* NSMPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C79317F15B31D7100308992 /* NSMPDFCGContextRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317D15B31D7100308992 /* NSMPDFCGContextRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C79318015B31D7100308992 /* NSMPDFCGContextRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */; };
 		2C79318115B31FB800308992 /* NSMPDFRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79317C15B31C5200308992 /* NSMPDFRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -87,6 +86,9 @@
 		2CAF77EA15C5552B0076C4EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF77E315C5552B0076C4EB /* MainMenu.xib */; };
 		2CAF77EB15C5552B0076C4EB /* NSMDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF77E515C5552B0076C4EB /* NSMDocument.xib */; };
 		2CAF77EE15C5558F0076C4EB /* NSMPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313A15B2FF2500308992 /* NSMPDFKit.framework */; };
+		2CDBA7E715C55DCD004221FD /* NSMUIGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7E515C55DCD004221FD /* NSMUIGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CDBA7E815C55DCD004221FD /* NSMUIGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA7E615C55DCD004221FD /* NSMUIGeometry.m */; };
+		2CDBA7EF15C55E69004221FD /* NSMPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CDBA7EE15C55E69004221FD /* NSMPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -173,6 +175,9 @@
 		2CAF77E215C5552B0076C4EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2CAF77E415C5552B0076C4EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		2CAF77E615C5552B0076C4EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NSMDocument.xib; sourceTree = "<group>"; };
+		2CDBA7E515C55DCD004221FD /* NSMUIGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMUIGeometry.h; sourceTree = "<group>"; };
+		2CDBA7E615C55DCD004221FD /* NSMUIGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMUIGeometry.m; sourceTree = "<group>"; };
+		2CDBA7EE15C55E69004221FD /* NSMPDFKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +346,8 @@
 		2C79314115B2FF2500308992 /* NSMPDFKit-OSX */ = {
 			isa = PBXGroup;
 			children = (
+				2CDBA7EE15C55E69004221FD /* NSMPDFKit.h */,
+				2CDBA7E415C55DCD004221FD /* Classes */,
 				2C01260115B36595008A57BA /* Resources */,
 				2C79314215B2FF2500308992 /* Supporting Files */,
 			);
@@ -416,6 +423,15 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		2CDBA7E415C55DCD004221FD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2CDBA7E515C55DCD004221FD /* NSMUIGeometry.h */,
+				2CDBA7E615C55DCD004221FD /* NSMUIGeometry.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -448,10 +464,11 @@
 				2C79315615B2FF5500308992 /* NSMPDFPage.h in Headers */,
 				2C79315915B2FF5500308992 /* NSMPDFMarkedSequence.h in Headers */,
 				2C79315B15B2FF5500308992 /* NSMPDFPath.h in Headers */,
-				2C79317715B3006F00308992 /* NSMPDFKit.h in Headers */,
 				2C79318215B31FBC00308992 /* NSMPDFRenderer.h in Headers */,
 				2C79318315B31FC500308992 /* NSMPDFCGContextRenderer.h in Headers */,
 				2C79318B15B33B4800308992 /* NSMPDFShading.h in Headers */,
+				2CDBA7E715C55DCD004221FD /* NSMUIGeometry.h in Headers */,
+				2CDBA7EF15C55E69004221FD /* NSMPDFKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,6 +680,7 @@
 				2C79315C15B2FF5500308992 /* NSMPDFPath.m in Sources */,
 				2C79318415B31FCC00308992 /* NSMPDFCGContextRenderer.m in Sources */,
 				2C79318D15B33B4800308992 /* NSMPDFShading.m in Sources */,
+				2CDBA7E815C55DCD004221FD /* NSMUIGeometry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

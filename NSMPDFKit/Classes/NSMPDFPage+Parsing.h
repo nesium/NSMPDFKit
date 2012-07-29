@@ -22,6 +22,7 @@
 - (CGColorSpaceRef)newColorSpaceForKey:(const char *)key;
 - (NSMPDFShading *)shadingForKey:(const char *)key;
 
+- (void)parseProperties;
 - (void)parseResources;
 - (void)scanPage;
 @end

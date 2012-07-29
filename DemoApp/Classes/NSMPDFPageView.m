@@ -24,9 +24,19 @@
 
 #pragma mark - UIView methods
 
+- (BOOL)isFlipped
+{
+	return YES;
+}
+
 - (void)drawRect:(NSRect)aRect
 {
 	CGContextRef ctx = [NSGraphicsContext currentContext].graphicsPort;
+    
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    transform = CGAffineTransformScale(transform, 1.0f, -1.0f);
+    transform = CGAffineTransformTranslate(transform, 0.0f, -NSHeight(self.frame));
+    CGContextConcatCTM(ctx, transform);
 	[page renderWithRenderer:[[NSMPDFCGContextRenderer alloc] initWithContext:ctx]];
 }
 @end
