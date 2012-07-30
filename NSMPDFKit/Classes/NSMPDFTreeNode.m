@@ -11,15 +11,19 @@
 @implementation NSMPDFTreeNode
 {
 	NSArray *_childNodes;
+    CGRect _frame;
+    CGRect _bounds;
 }
 
-@synthesize childNodes = _childNodes;
+@synthesize childNodes = _childNodes, frame = _frame, bounds = _bounds;
 
 #pragma mark - Initialization & Deallocation
 
-- (id)initWithChildNodes:(NSArray *)childNodes
+- (id)initWithFrame:(CGRect)frame bounds:(CGRect)bounds childNodes:(NSArray *)childNodes
 {
 	if ((self = [super init])) {
+    	_frame = frame;
+        _bounds = bounds;
     	_childNodes = [childNodes copy];
 	}
 	return self;

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <NSMPDFKit/NSMPDFRenderer.h>
 #import <NSMPDFKit/NSMPDFTreeNode.h>
+#if TARGET_OS_MAC
+#import <NSMPDFKit/NSMUIGeometry.h>
+#endif
 
 @interface NSMPDFTreeRenderer : NSObject <NSMPDFRenderer>
 @property (nonatomic, readonly) NSMPDFTreeNode *rootNode;

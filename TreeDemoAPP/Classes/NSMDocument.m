@@ -65,11 +65,12 @@ NSString *const NSMDocumentBecameMainNotification = @"NSMDocumentBecameMainNotif
 - (void)applyPage
 {
     NSMPDFPage *page = [_pdfDocument.pages objectAtIndex:0];
-    _pdfPageView.frame = page.mediaBox;
-    _pdfPageView.page = page;
     
     NSMPDFTreeRenderer *renderer = [[NSMPDFTreeRenderer alloc] init];
     [page renderWithRenderer:renderer];
     _rootNode = renderer.rootNode;
+    
+    _pdfPageView.frame = page.mediaBox;
+    _pdfPageView.rootNode = renderer.rootNode;
 }
 @end

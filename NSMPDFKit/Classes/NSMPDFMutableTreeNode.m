@@ -11,9 +11,11 @@
 @implementation NSMPDFMutableTreeNode
 {
 	NSMutableArray *_childNodes;
+    CGRect _frame;
+    CGRect _bounds;
 }
 
-@synthesize childNodes = _childNodes;
+@synthesize childNodes = _childNodes, frame = _frame, bounds = _bounds;
 
 #pragma mark - Initialization & Deallocation
 
@@ -52,6 +54,21 @@
 	[_childNodes addObject:node];
 }
 
+- (void)finalize
+{
+	CGRect frame = self.frame;
+    CGRect bounds = CGRectZero;
+    for (NSMPDFMutableTreeNode *node in self.childNodes) {
+    	[node finalize];
+    	bounds.origin.x = MIN(CGRectGetMinX(bounds), CGRectGetMinX(node.bounds));
+    	bounds.origin.y = MIN(CGRectGetMinY(bounds), CGRectGetMinY(node.bounds));
+        bounds.size.width = MAX(CGRectGetWidth(bounds), CGRectGetWidth(node.bounds));
+        bounds.size.height = MAX(CGRectGetHeight(bounds), CGRectGetHeight(node.bounds));
+    }
+    frame.size = bounds.size;
+    self.frame = frame;
+}
+
 
 
 #pragma mark - NSCopying Protocol methods
@@ -62,6 +79,6 @@
     for (NSMPDFMutableTreeNode *node in _childNodes) {
     	[copies addObject:[node copy]];
     }
-	return [[NSMPDFTreeNode alloc] initWithChildNodes:copies];
+	return [[NSMPDFTreeNode alloc] initWithFrame:self.frame bounds:self.bounds childNodes:copies];
 }
 @end

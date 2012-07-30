@@ -10,7 +10,7 @@
 #import "NSMPDFTreeNode.h"
 
 @interface NSMPDFPathNode : NSMPDFTreeNode
-- (id)initWithCGPath:(CGPathRef)path;
+- (id)initWithFrame:(CGRect)frame bounds:(CGRect)bounds path:(CGPathRef)path;
 
 @property (nonatomic, readonly) __attribute__((NSObject)) CGPathRef path;
 @end

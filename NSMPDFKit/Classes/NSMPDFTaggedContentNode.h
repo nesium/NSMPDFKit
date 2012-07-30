@@ -9,7 +9,8 @@
 #import "NSMPDFTreeNode.h"
 
 @interface NSMPDFTaggedContentNode : NSMPDFTreeNode
-- (id)initWithProperties:(NSDictionary *)properties childNodes:(NSArray *)childNodes;
+- (id)initWithFrame:(CGRect)frame bounds:(CGRect)bounds properties:(NSDictionary *)properties
+	childNodes:(NSArray *)childNodes;
 
 @property (nonatomic, readonly) NSDictionary *properties;
 @end

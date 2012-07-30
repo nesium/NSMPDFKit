@@ -17,9 +17,10 @@
 
 #pragma mark - Initialization & Deallocation
 
-- (id)initWithProperties:(NSDictionary *)properties childNodes:(NSArray *)childNodes
+- (id)initWithFrame:(CGRect)frame bounds:(CGRect)bounds properties:(NSDictionary *)properties
+	childNodes:(NSArray *)childNodes
 {
-	if ((self = [super initWithChildNodes:childNodes])) {
+	if ((self = [super initWithFrame:frame bounds:bounds childNodes:childNodes])) {
     	_properties = [properties copy];
     }
     return self;

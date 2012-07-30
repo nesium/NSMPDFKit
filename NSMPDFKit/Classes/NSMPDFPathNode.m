@@ -17,9 +17,9 @@
 
 #pragma mark - Initialization & Deallocation
 
-- (id)initWithCGPath:(CGPathRef)path
+- (id)initWithFrame:(CGRect)frame bounds:(CGRect)bounds path:(CGPathRef)path
 {
-	if ((self = [super init])) {
+	if ((self = [super initWithFrame:frame bounds:bounds childNodes:nil])) {
     	_path = CGPathCreateCopy(path);
 	}
 	return self;

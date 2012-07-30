@@ -27,6 +27,7 @@
 		2C0125FC15B3650B008A57BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C0125FA15B3650B008A57BA /* InfoPlist.strings */; };
 		2C01260315B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
 		2C01260415B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
+		2C43D9C915C5D9BF00C9828C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */; };
 		2C7930D015B2DEBD00308992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CF15B2DEBD00308992 /* Foundation.framework */; };
 		2C7930EF15B2DF2400308992 /* NSMPDFContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930DF15B2DF2400308992 /* NSMPDFContext.m */; };
 		2C7930F015B2DF2400308992 /* NSMPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E115B2DF2400308992 /* NSMPDFDocument.m */; };
@@ -172,6 +173,7 @@
 		2C0125FB15B3650B008A57BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C0125FD15B3650B008A57BA /* NSMPDFKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKitResources-Prefix.pch"; sourceTree = "<group>"; };
 		2C01260215B36595008A57BA /* glyphlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glyphlist.txt; sourceTree = "<group>"; };
+		2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSMPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7930CF15B2DEBD00308992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C7930D315B2DEBD00308992 /* NSMPDFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -242,7 +244,6 @@
 		2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPathNode.m; sourceTree = "<group>"; };
 		2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMutablePathNode.h; sourceTree = "<group>"; };
 		2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMutablePathNode.m; sourceTree = "<group>"; };
-		2CDBA83515C5708F004221FD /* DemoApp copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DemoApp copy-Info.plist"; path = "/Users/mb/Desktop/MeToo/NSMPDFKit/DemoApp copy-Info.plist"; sourceTree = "<absolute>"; };
 		2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreeDemoAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CDBA83F15C570A5004221FD /* TreeDemoAPP-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TreeDemoAPP-Info.plist"; sourceTree = "<group>"; };
 		2CDBA84115C570A5004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -307,6 +308,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C43D9C915C5D9BF00C9828C /* QuartzCore.framework in Frameworks */,
 				2CDBA86F15C57147004221FD /* NSMPDFKit.framework in Frameworks */,
 				2CDBA83C15C570A5004221FD /* Cocoa.framework in Frameworks */,
 			);
@@ -352,7 +354,6 @@
 				2CDBA83D15C570A5004221FD /* TreeDemoAPP */,
 				2C7930CE15B2DEBD00308992 /* Frameworks */,
 				2C7930CD15B2DEBD00308992 /* Products */,
-				2CDBA83515C5708F004221FD /* DemoApp copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +377,7 @@
 				2C7930CF15B2DEBD00308992 /* Foundation.framework */,
 				2C79313B15B2FF2500308992 /* Cocoa.framework */,
 				2C0125F515B3650B008A57BA /* CoreFoundation.framework */,
+				2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */,
 				2C79313D15B2FF2500308992 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -1459,6 +1461,7 @@
 				2CDBA85115C570A5004221FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

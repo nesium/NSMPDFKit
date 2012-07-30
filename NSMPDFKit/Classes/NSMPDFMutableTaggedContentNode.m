@@ -19,7 +19,7 @@
     for (NSMPDFMutableTreeNode *node in self.childNodes) {
     	[copies addObject:[node copy]];
     }
-	return [[NSMPDFTaggedContentNode alloc] initWithProperties:self.properties
-    	childNodes:copies];
+	return [[NSMPDFTaggedContentNode alloc] initWithFrame:self.frame bounds:self.bounds
+    	properties:self.properties childNodes:copies];
 }
 @end

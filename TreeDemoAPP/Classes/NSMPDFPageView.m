@@ -8,35 +8,100 @@
 
 #import "NSMPDFPageView.h"
 
-@implementation NSMPDFPageView
+@interface NSMPDFTreeNodeLayer : CALayer
++ (id)layerWithNode:(NSMPDFTreeNode *)node;
+@end
 
-@synthesize page;
+
+@implementation NSMPDFPageView
+{
+	CALayer *_rootLayer;
+}
+
+#pragma mark - Initialization & Deallocation
+
+- (id)initWithFrame:(NSRect)frameRect
+{
+	if ((self = [super initWithFrame:frameRect])) {
+    	self.layer = [CALayer layer];
+        self.wantsLayer = YES;
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	if ((self = [super initWithCoder:aDecoder])) {
+    	self.layer = [CALayer layer];
+        self.wantsLayer = YES;
+	}
+	return self;
+}
+
+
 
 #pragma mark - Public methods
 
-- (void)setPage:(NSMPDFPage *)aPage
+- (void)setRootNode:(NSMPDFTreeNode *)rootNode
 {
-    page = aPage;
-    [self setNeedsDisplay:YES];
+	_rootNode = rootNode;
+    [_rootLayer removeFromSuperlayer];
+    _rootLayer = [NSMPDFTreeNodeLayer layerWithNode:_rootNode];
+    [self.layer addSublayer:_rootLayer];
+}
+@end
+
+
+
+
+@implementation NSMPDFTreeNodeLayer
+{
+	NSMPDFTreeNode *_node;
+}
+
+#pragma mark - Initialization & Deallocation
+
++ (id)layerWithNode:(NSMPDFTreeNode *)node
+{
+	return [[NSMPDFTreeNodeLayer alloc] initWithNode:node];
+}
+
+- (id)initWithNode:(NSMPDFTreeNode *)node
+{
+	if ((self = [super init])) {
+    	_node = node;
+        self.frame = node.frame;
+        [self createSublayers];
+        [self setNeedsDisplay];
+    }
+    return self;
 }
 
 
 
-#pragma mark - UIView methods
+#pragma mark - CALayer methods
 
-- (BOOL)isFlipped
+- (void)drawInContext:(CGContextRef)ctx
 {
-	return YES;
-}
-
-- (void)drawRect:(NSRect)aRect
-{
-	CGContextRef ctx = [NSGraphicsContext currentContext].graphicsPort;
+	CGContextSetFillColorWithColor(ctx, [NSColor blueColor].CGColor);
+    CGContextFillRect(ctx, self.bounds);
     
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    transform = CGAffineTransformScale(transform, 1.0f, -1.0f);
-    transform = CGAffineTransformTranslate(transform, 0.0f, -NSHeight(self.frame));
-    CGContextConcatCTM(ctx, transform);
-	[page renderWithRenderer:[[NSMPDFCGContextRenderer alloc] initWithContext:ctx]];
+	if ([_node isKindOfClass:[NSMPDFPathNode class]]) {
+		CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
+    	NSMPDFPathNode *pathNode = (NSMPDFPathNode *)_node;
+        CGContextAddPath(ctx, pathNode.path);
+        CGContextFillPath(ctx);
+    }
+}
+
+
+
+#pragma mark - Private methods
+
+- (void)createSublayers
+{
+	for (NSMPDFTreeNode *node in _node.childNodes) {
+    	[self addSublayer:[NSMPDFTreeNodeLayer layerWithNode:node]];
+    }
 }
 @end

@@ -7,8 +7,9 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <QuartzCore/QuartzCore.h>
 #import <NSMPDFKit/NSMPDFKit.h>
 
 @interface NSMPDFPageView : NSView
-@property (nonatomic, retain) NSMPDFPage *page;
+@property (nonatomic, retain) NSMPDFTreeNode *rootNode;
 @end
