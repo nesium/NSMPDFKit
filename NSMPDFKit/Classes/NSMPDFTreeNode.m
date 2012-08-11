@@ -47,4 +47,15 @@
 {
 	return _childNodes.count == 0;
 }
+
+
+
+#pragma mark - NSObject methods
+
+- (NSString *)description
+{
+	return [NSString stringWithFormat:@"<%@ = 0x%08lx> frame: %@, bounds: %@",
+    	NSStringFromClass([self class]), (long)self, NSStringFromRect(self.frame),
+        NSStringFromRect(self.bounds)];
+}
 @end

@@ -10,12 +10,14 @@
 
 @interface NSMPDFTreeNodeLayer : CALayer
 + (id)layerWithNode:(NSMPDFTreeNode *)node;
+@property (nonatomic, readonly) NSMPDFTreeNode *node;
 @end
 
 
 @implementation NSMPDFPageView
 {
-	CALayer *_rootLayer;
+	NSMPDFTreeNodeLayer *_rootLayer;
+    NSArray *_highlightedLayers;
 }
 
 #pragma mark - Initialization & Deallocation
@@ -48,6 +50,32 @@
     [_rootLayer removeFromSuperlayer];
     _rootLayer = [NSMPDFTreeNodeLayer layerWithNode:_rootNode];
     [self.layer addSublayer:_rootLayer];
+}
+
+- (void)highlightNodes:(NSSet *)nodes
+{
+	for (CALayer *layer in _highlightedLayers) {
+    	layer.borderWidth = 0.0f;
+        layer.borderColor = nil;
+    }
+    _highlightedLayers = nil;
+    
+	NSArray *(^__block layersForNodes)(NSMPDFTreeNodeLayer *) = ^NSArray *(NSMPDFTreeNodeLayer *layer) {
+    	NSMutableArray *result = [NSMutableArray array];
+        if ([nodes containsObject:layer.node])
+        	[result addObject:layer];
+        for (CALayer *sublayer in layer.sublayers) {
+        	if ([sublayer isKindOfClass:[NSMPDFTreeNodeLayer class]])
+            	[result addObjectsFromArray:layersForNodes((NSMPDFTreeNodeLayer *)sublayer)];
+        }
+        return result;
+    };
+    
+	_highlightedLayers = layersForNodes(_rootLayer);
+    for (CALayer *layer in _highlightedLayers) {
+    	layer.borderWidth = 2.0f;
+		layer.borderColor = [NSColor redColor].CGColor;
+    }
 }
 @end
 
@@ -83,12 +111,9 @@
 
 - (void)drawInContext:(CGContextRef)ctx
 {
-	CGContextSetFillColorWithColor(ctx, [NSColor blueColor].CGColor);
-    CGContextFillRect(ctx, self.bounds);
-    
 	if ([_node isKindOfClass:[NSMPDFPathNode class]]) {
-		CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
     	NSMPDFPathNode *pathNode = (NSMPDFPathNode *)_node;
+		CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
         CGContextAddPath(ctx, pathNode.path);
         CGContextFillPath(ctx);
     }

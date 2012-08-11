@@ -14,4 +14,5 @@ extern NSString *const NSMDocumentBecameMainNotification;
 @interface NSMDocument : NSDocument
 @property (nonatomic, readonly) NSMPDFDocument *pdfDocument;
 @property (nonatomic, readonly) NSMPDFTreeNode *rootNode;
+- (void)highlightNodes:(NSArray *)nodes;
 @end

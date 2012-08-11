@@ -56,17 +56,31 @@
 
 - (void)finalize
 {
-	CGRect frame = self.frame;
-    CGRect bounds = CGRectZero;
+    CGRect bounds = CGRectNull;
     for (NSMPDFMutableTreeNode *node in self.childNodes) {
     	[node finalize];
-    	bounds.origin.x = MIN(CGRectGetMinX(bounds), CGRectGetMinX(node.bounds));
-    	bounds.origin.y = MIN(CGRectGetMinY(bounds), CGRectGetMinY(node.bounds));
-        bounds.size.width = MAX(CGRectGetWidth(bounds), CGRectGetWidth(node.bounds));
-        bounds.size.height = MAX(CGRectGetHeight(bounds), CGRectGetHeight(node.bounds));
+        
+        if (CGRectIsNull(bounds)) {
+        	bounds = node.frame;
+            continue;
+        }
+        
+    	bounds.origin.x = MIN(CGRectGetMinX(bounds), CGRectGetMinX(node.frame));
+    	bounds.origin.y = MIN(CGRectGetMinY(bounds), CGRectGetMinY(node.frame));
+        bounds.size.width = MAX(CGRectGetWidth(bounds), CGRectGetMaxX(node.frame));
+        bounds.size.height = MAX(CGRectGetHeight(bounds), CGRectGetMaxY(node.frame));
     }
-    frame.size = bounds.size;
-    self.frame = frame;
+    
+    bounds.size.width -= CGRectGetMinX(bounds);
+    bounds.size.height -= CGRectGetMinY(bounds);
+    
+    for (NSMPDFMutableTreeNode *node in self.childNodes) {
+		node.frame = (CGRect){CGRectGetMinX(node.frame) - CGRectGetMinX(bounds),
+        	CGRectGetMinY(node.frame) - CGRectGetMinY(bounds),
+            node.frame.size};
+    }
+    
+    self.frame = bounds;
 }
 
 

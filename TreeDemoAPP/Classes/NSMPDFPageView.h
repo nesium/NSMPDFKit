@@ -12,4 +12,5 @@
 
 @interface NSMPDFPageView : NSView
 @property (nonatomic, retain) NSMPDFTreeNode *rootNode;
+- (void)highlightNodes:(NSSet *)nodes;
 @end

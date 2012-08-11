@@ -15,12 +15,23 @@
 
 - (void)finalize
 {
-    self.bounds = CGPathGetBoundingBox(self.path);
+    self.bounds = CGPathGetPathBoundingBox(self.path);
     CGRect frame = self.frame;
-    frame.size.width = CGRectGetWidth(self.bounds) - CGRectGetMinX(self.bounds);
-    frame.size.height = CGRectGetHeight(self.bounds) - CGRectGetMinY(self.bounds);
+    frame.origin.x += CGRectGetMinX(self.bounds);
+    frame.origin.y += CGRectGetMinY(self.bounds);
+    frame.size.width = CGRectGetWidth(self.bounds);
+    frame.size.height = CGRectGetHeight(self.bounds);
     self.frame = frame;
+    
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(
+        	-CGRectGetMinX(self.bounds), -CGRectGetMinY(self.bounds));
+    CGMutablePathRef transformedPath = CGPathCreateMutableCopyByTransformingPath(
+    	_path, &transform);
+    CGPathRelease(_path);
+    _path = transformedPath;
 }
+
+
 
 #pragma mark - NSObject methods
 

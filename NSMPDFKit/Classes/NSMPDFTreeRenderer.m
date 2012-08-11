@@ -24,6 +24,7 @@
 	NSMPDFMutableTreeNode *_mutableNode;
     NSMPDFMutableTreeNode *_currentContainerNode;
     NSMPDFMutableTreeNode *_currentNode;
+    NSMPDFMutablePathNode *_lastPathNode;
     NSMPDFTreeNode *_rootNode;
     NSMPDFTreeRendererGraphicsState *_graphicsState;
     NSMutableArray *_graphicsStateStack;
@@ -117,7 +118,9 @@
 
 - (void)addPath
 {
+	NDCLog(@"Add path");
 	NSMPDFMutablePathNode *node = [[NSMPDFMutablePathNode alloc] init];
+    _lastPathNode = node;
     node.frame = (CGRect){_graphicsState.ctm.tx, _graphicsState.ctm.ty, 0.0f, 0.0f};
     node.path = CGPathCreateMutable();
     [_currentContainerNode addChildNode:node];
@@ -126,12 +129,14 @@
 
 - (void)closePath
 {
+	NDCLog(@"Close path");
 	[_currentNode finalize];
 	_currentNode = nil;
 }
 
 - (void)clip
 {
+	NDCLog(@"Current node: %@", _lastPathNode);
 }
 
 - (CGPoint)pathCurrentPoint

@@ -19,8 +19,6 @@
 #import <NSMPDFKit/NSMPDFCGContextRenderer.h>
 #import <NSMPDFKit/NSMPDFTreeRenderer.h>
 
-#import <NSMPDFKit/NSMPDFMarkedSequence.h>
-#import <NSMPDFKit/NSMPDFPath.h>
 #import <NSMPDFKit/NSMPDFShading.h>
 
 #import <NSMPDFKit/NSMPDFTreeNode.h>

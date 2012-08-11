@@ -15,6 +15,7 @@
 {
 	NSMInfoPanelController *_infoPanelCtrl;
     NSMOutlinePanelController *_outlinePanelCtrl;
+    NSMDocument *_selectedDocument;
 }
 
 #pragma mark - NSApplicationDelegate methods
@@ -31,6 +32,12 @@
     	addObserver:self 
     	selector:@selector(documentSelectionDidChange:) 
         name:NSMDocumentBecameMainNotification 
+        object:nil];
+    
+    [[NSNotificationCenter defaultCenter]
+    	addObserver:self
+        selector:@selector(outlineSelectionDidChange:)
+        name:NSMOutlineSelectionDidChangeNotification
         object:nil];
 }
 
@@ -52,8 +59,14 @@
 
 - (void)documentSelectionDidChange:(NSNotification *)note
 {
-	NSMDocument *doc = (NSMDocument *)note.object;
-    _infoPanelCtrl.pdfDocument = doc.pdfDocument;
-    _outlinePanelCtrl.rootNode = doc.rootNode;
+	_selectedDocument = (NSMDocument *)note.object;
+    _infoPanelCtrl.pdfDocument = _selectedDocument.pdfDocument;
+    _outlinePanelCtrl.rootNode = _selectedDocument.rootNode;
+}
+
+- (void)outlineSelectionDidChange:(NSNotification *)note
+{
+	NSArray *objects = note.userInfo[NSMOutlineSelectedObjectsKey];
+	[_selectedDocument highlightNodes:objects];
 }
 @end

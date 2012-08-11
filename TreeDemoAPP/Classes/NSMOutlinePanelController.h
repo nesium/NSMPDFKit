@@ -9,6 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import <NSMPDFKit/NSMPDFKit.h>
 
+extern NSString *const NSMOutlineSelectionDidChangeNotification;
+extern NSString *const NSMOutlineSelectedObjectsKey;
+
 @interface NSMOutlinePanelController : NSWindowController
 @property (nonatomic, retain) NSMPDFTreeNode *rootNode;
 @end

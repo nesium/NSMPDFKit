@@ -22,6 +22,14 @@ NSString *const NSMDocumentBecameMainNotification = @"NSMDocumentBecameMainNotif
     BOOL _clippingEnabled;
 }
 
+#pragma mark - Public methods
+
+- (void)highlightNodes:(NSArray *)nodes
+{
+	[_pdfPageView highlightNodes:[NSSet setWithArray:nodes]];
+}
+
+
 #pragma mark - NSDocument methods
 
 - (NSString *)windowNibName
