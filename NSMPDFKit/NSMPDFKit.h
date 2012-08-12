@@ -24,7 +24,9 @@
 #import <NSMPDFKit/NSMPDFTreeNode.h>
 #import <NSMPDFKit/NSMPDFTaggedContentNode.h>
 #import <NSMPDFKit/NSMPDFPathNode.h>
+#import <NSMPDFKit/NSMPDFClippingGroupNode.h>
 
 #import <NSMPDFKit/NSMPDFMutableTreeNode.h>
 #import <NSMPDFKit/NSMPDFMutableTaggedContentNode.h>
 #import <NSMPDFKit/NSMPDFMutablePathNode.h>
+#import <NSMPDFKit/NSMPDFMutableClippingGroupNode.h>

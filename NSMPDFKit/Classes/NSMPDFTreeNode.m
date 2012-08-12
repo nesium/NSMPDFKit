@@ -7,6 +7,9 @@
 //
 
 #import "NSMPDFTreeNode.h"
+#if !(TARGET_OS_IPHONE)
+#import <NSMPDFKit/NSMUIGeometry.h>
+#endif
 
 @implementation NSMPDFTreeNode
 {
@@ -48,6 +51,13 @@
 	return _childNodes.count == 0;
 }
 
+- (void)drawInContext:(CGContextRef)ctx
+{
+	for (NSMPDFTreeNode *node in self.childNodes) {
+    	[node drawInContext:ctx];
+    }
+}
+
 
 
 #pragma mark - NSObject methods
@@ -55,7 +65,7 @@
 - (NSString *)description
 {
 	return [NSString stringWithFormat:@"<%@ = 0x%08lx> frame: %@, bounds: %@",
-    	NSStringFromClass([self class]), (long)self, NSStringFromRect(self.frame),
-        NSStringFromRect(self.bounds)];
+    	NSStringFromClass([self class]), (long)self, NSStringFromCGRect(self.frame),
+        NSStringFromCGRect(self.bounds)];
 }
 @end

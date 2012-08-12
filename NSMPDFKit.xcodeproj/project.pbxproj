@@ -27,6 +27,14 @@
 		2C0125FC15B3650B008A57BA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C0125FA15B3650B008A57BA /* InfoPlist.strings */; };
 		2C01260315B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
 		2C01260415B36595008A57BA /* glyphlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C01260215B36595008A57BA /* glyphlist.txt */; };
+		2C1DAFEE15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1DAFEC15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1DAFEF15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1DAFEC15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1DAFF015D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFED15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m */; };
+		2C1DAFF115D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFED15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m */; };
+		2C1DAFF415D6C7880066DA05 /* NSMPDFClippingGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1DAFF215D6C7880066DA05 /* NSMPDFClippingGroupNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1DAFF515D6C7880066DA05 /* NSMPDFClippingGroupNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C1DAFF215D6C7880066DA05 /* NSMPDFClippingGroupNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2C1DAFF615D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */; };
+		2C1DAFF715D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */; };
 		2C43D9C915C5D9BF00C9828C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */; };
 		2C7930D015B2DEBD00308992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CF15B2DEBD00308992 /* Foundation.framework */; };
 		2C7930EF15B2DF2400308992 /* NSMPDFContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930DF15B2DF2400308992 /* NSMPDFContext.m */; };
@@ -165,6 +173,10 @@
 		2C0125FB15B3650B008A57BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2C0125FD15B3650B008A57BA /* NSMPDFKitResources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKitResources-Prefix.pch"; sourceTree = "<group>"; };
 		2C01260215B36595008A57BA /* glyphlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = glyphlist.txt; sourceTree = "<group>"; };
+		2C1DAFEC15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFMutableClippingGroupNode.h; sourceTree = "<group>"; };
+		2C1DAFED15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFMutableClippingGroupNode.m; sourceTree = "<group>"; };
+		2C1DAFF215D6C7880066DA05 /* NSMPDFClippingGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFClippingGroupNode.h; sourceTree = "<group>"; };
+		2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFClippingGroupNode.m; sourceTree = "<group>"; };
 		2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSMPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7930CF15B2DEBD00308992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -538,6 +550,8 @@
 				2CDBA80C15C56BE9004221FD /* NSMPDFTaggedContentNode.m */,
 				2CDBA81115C56D24004221FD /* NSMPDFPathNode.h */,
 				2CDBA81215C56D24004221FD /* NSMPDFPathNode.m */,
+				2C1DAFF215D6C7880066DA05 /* NSMPDFClippingGroupNode.h */,
+				2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */,
 			);
 			name = Immutable;
 			sourceTree = "<group>";
@@ -551,6 +565,8 @@
 				2CDBA80615C56B6A004221FD /* NSMPDFMutableTaggedContentNode.m */,
 				2CDBA81715C56DC7004221FD /* NSMPDFMutablePathNode.h */,
 				2CDBA81815C56DC7004221FD /* NSMPDFMutablePathNode.m */,
+				2C1DAFEC15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h */,
+				2C1DAFED15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m */,
 			);
 			name = Mutable;
 			sourceTree = "<group>";
@@ -630,6 +646,8 @@
 				2CDBA80D15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */,
 				2CDBA81315C56D24004221FD /* NSMPDFPathNode.h in Headers */,
 				2CDBA81915C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */,
+				2C1DAFEE15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h in Headers */,
+				2C1DAFF415D6C7880066DA05 /* NSMPDFClippingGroupNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +672,8 @@
 				2CDBA80E15C56BE9004221FD /* NSMPDFTaggedContentNode.h in Headers */,
 				2CDBA81415C56D24004221FD /* NSMPDFPathNode.h in Headers */,
 				2CDBA81A15C56DC7004221FD /* NSMPDFMutablePathNode.h in Headers */,
+				2C1DAFEF15D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.h in Headers */,
+				2C1DAFF515D6C7880066DA05 /* NSMPDFClippingGroupNode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +906,8 @@
 				2CDBA80F15C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */,
 				2CDBA81515C56D24004221FD /* NSMPDFPathNode.m in Sources */,
 				2CDBA81B15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */,
+				2C1DAFF015D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m in Sources */,
+				2C1DAFF615D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +931,8 @@
 				2CDBA81015C56BE9004221FD /* NSMPDFTaggedContentNode.m in Sources */,
 				2CDBA81615C56D24004221FD /* NSMPDFPathNode.m in Sources */,
 				2CDBA81C15C56DC7004221FD /* NSMPDFMutablePathNode.m in Sources */,
+				2C1DAFF115D6C74C0066DA05 /* NSMPDFMutableClippingGroupNode.m in Sources */,
+				2C1DAFF715D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1325,10 +1349,6 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP3.app/Contents/Developer/Library/Frameworks\"",
-				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TreeDemoAPP/TreeDemoAPP-Prefix.pch";
@@ -1349,10 +1369,6 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SYSTEM_APPS_DIR)/Xcode45-DP3.app/Contents/Developer/Library/Frameworks\"",
-				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TreeDemoAPP/TreeDemoAPP-Prefix.pch";

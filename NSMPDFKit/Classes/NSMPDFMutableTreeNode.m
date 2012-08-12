@@ -51,36 +51,62 @@
 
 - (void)addChildNode:(id)node
 {
+	((NSMPDFMutableTreeNode *)node).parentNode = self;
 	[_childNodes addObject:node];
+}
+
+- (void)removeChildNode:(id)node
+{
+	((NSMPDFMutableTreeNode *)node).parentNode = nil;
+	[_childNodes removeObject:node];
+}
+
+- (void)removeFromParentNode
+{
+	[_parentNode removeChildNode:self];
+}
+
+- (void)removeAllChildNodes
+{
+	[_childNodes removeAllObjects];
 }
 
 - (void)finalize
 {
-    CGRect bounds = CGRectNull;
-    for (NSMPDFMutableTreeNode *node in self.childNodes) {
+    CGRect frame = CGRectNull;
+    NSArray *childNodes = [self.childNodes copy];
+    for (NSMPDFMutableTreeNode *node in childNodes) {
     	[node finalize];
         
-        if (CGRectIsNull(bounds)) {
-        	bounds = node.frame;
+        if (CGRectIsEmpty(node.bounds)) {
+        	[self removeChildNode:node];
+        	continue;
+        }
+        
+        if (CGRectIsNull(frame)) {
+        	frame = node.frame;
             continue;
         }
         
-    	bounds.origin.x = MIN(CGRectGetMinX(bounds), CGRectGetMinX(node.frame));
-    	bounds.origin.y = MIN(CGRectGetMinY(bounds), CGRectGetMinY(node.frame));
-        bounds.size.width = MAX(CGRectGetWidth(bounds), CGRectGetMaxX(node.frame));
-        bounds.size.height = MAX(CGRectGetHeight(bounds), CGRectGetMaxY(node.frame));
+    	frame.origin.x = MIN(CGRectGetMinX(frame), CGRectGetMinX(node.frame));
+    	frame.origin.y = MIN(CGRectGetMinY(frame), CGRectGetMinY(node.frame));
+        frame.size.width = MAX(CGRectGetWidth(frame), CGRectGetMaxX(node.frame));
+        frame.size.height = MAX(CGRectGetHeight(frame), CGRectGetMaxY(node.frame));
     }
     
-    bounds.size.width -= CGRectGetMinX(bounds);
-    bounds.size.height -= CGRectGetMinY(bounds);
+//    NDCLog(@"1 %@", NSStringFromCGRect(frame));
+//    frame.size.width -= CGRectGetMinX(frame);
+//    frame.size.height -= CGRectGetMinY(frame);
+//    NDCLog(@"2 %@", NSStringFromCGRect(frame));
     
     for (NSMPDFMutableTreeNode *node in self.childNodes) {
-		node.frame = (CGRect){CGRectGetMinX(node.frame) - CGRectGetMinX(bounds),
-        	CGRectGetMinY(node.frame) - CGRectGetMinY(bounds),
+		node.frame = (CGRect){CGRectGetMinX(node.frame) - CGRectGetMinX(frame),
+        	CGRectGetMinY(node.frame) - CGRectGetMinY(frame),
             node.frame.size};
     }
     
-    self.frame = bounds;
+    self.frame = frame;
+    self.bounds = (CGRect){0.0f, 0.0f, frame.size};
 }
 
 

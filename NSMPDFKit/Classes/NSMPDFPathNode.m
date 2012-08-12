@@ -29,4 +29,13 @@
 {
 	CGPathRelease(_path);
 }
+
+
+
+#pragma mark - Public methods
+
+- (void)drawInContext:(CGContextRef)ctx
+{
+    CGContextAddPath(ctx, self.path);
+}
 @end

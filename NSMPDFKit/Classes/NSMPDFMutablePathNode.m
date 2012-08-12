@@ -15,7 +15,17 @@
 
 - (void)finalize
 {
-    self.bounds = CGPathGetPathBoundingBox(self.path);
+	for (NSMPDFMutablePathNode *node in self.childNodes) {
+    	[node finalize];
+    	CGPathAddPath(_path, NULL, node.path);
+    }
+    [self removeAllChildNodes];
+    
+	if ([self.parentNode isKindOfClass:[NSMPDFMutablePathNode class]] ||
+    	CGPathIsEmpty(_path))
+    	return;
+    
+    self.bounds = CGPathGetPathBoundingBox(_path);
     CGRect frame = self.frame;
     frame.origin.x += CGRectGetMinX(self.bounds);
     frame.origin.y += CGRectGetMinY(self.bounds);

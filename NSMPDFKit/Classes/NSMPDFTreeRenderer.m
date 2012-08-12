@@ -10,6 +10,7 @@
 #import "NSMPDFMutableTreeNode.h"
 #import "NSMPDFMutableTaggedContentNode.h"
 #import "NSMPDFMutablePathNode.h"
+#import "NSMPDFTaggedContentNode.h"
 
 
 @interface NSMPDFTreeRendererGraphicsState : NSObject <NSCopying>
@@ -24,13 +25,13 @@
 	NSMPDFMutableTreeNode *_mutableNode;
     NSMPDFMutableTreeNode *_currentContainerNode;
     NSMPDFMutableTreeNode *_currentNode;
-    NSMPDFMutablePathNode *_lastPathNode;
     NSMPDFTreeNode *_rootNode;
     NSMPDFTreeRendererGraphicsState *_graphicsState;
     NSMutableArray *_graphicsStateStack;
+    NSMutableArray *_markedContentNodes;
 }
 
-@synthesize rootNode = _rootNode;
+@synthesize markedContentNodes = _markedContentNodes;
 
 - (void)beginRendering
 {
@@ -46,22 +47,31 @@
 	_graphicsStateStack = nil;
     [_rootNode finalize];
 	_rootNode = [_mutableNode copy];
+    
+    NSMutableArray *markedNodes = [[NSMutableArray alloc]
+    	initWithCapacity:_rootNode.childNodes.count];
+    for (NSMPDFTreeNode *node in _rootNode.childNodes) {
+    	if ([node isKindOfClass:[NSMPDFTaggedContentNode class]])
+        	[markedNodes addObject:node];
+    }
+    _markedContentNodes = [markedNodes copy];
     _mutableNode = nil;
 }
 
 - (void)beginMarkedContentWithProperties:(NSDictionary *)properties
 {
 	NSMPDFMutableTaggedContentNode *node = [[NSMPDFMutableTaggedContentNode alloc] init];
+    [_markedContentNodes addObject:node];
     node.frame = (CGRect){_graphicsState.ctm.tx, _graphicsState.ctm.ty, 0.0f, 0.0f};
     node.properties = properties;
-    [_mutableNode addChildNode:node];
+    [_currentContainerNode addChildNode:node];
     _currentContainerNode = node;
 }
 
 - (void)endMarkedContent
 {
 	[_currentContainerNode finalize];
-	_currentContainerNode = _mutableNode;
+	_currentContainerNode = _currentContainerNode.parentNode;
 }
 
 - (void)beginTextObject
@@ -118,25 +128,27 @@
 
 - (void)addPath
 {
-	NDCLog(@"Add path");
 	NSMPDFMutablePathNode *node = [[NSMPDFMutablePathNode alloc] init];
-    _lastPathNode = node;
     node.frame = (CGRect){_graphicsState.ctm.tx, _graphicsState.ctm.ty, 0.0f, 0.0f};
     node.path = CGPathCreateMutable();
-    [_currentContainerNode addChildNode:node];
+	
+	if ([_currentNode isKindOfClass:[NSMPDFMutablePathNode class]]) {
+    	[_currentNode addChildNode:node];
+    } else {
+	    [_currentContainerNode addChildNode:node];
+    }
+    
     _currentNode = node;
 }
 
 - (void)closePath
 {
-	NDCLog(@"Close path");
-	[_currentNode finalize];
-	_currentNode = nil;
+	_currentNode = _currentNode.parentNode;
 }
 
 - (void)clip
 {
-	NDCLog(@"Current node: %@", _lastPathNode);
+	_currentNode = nil;
 }
 
 - (CGPoint)pathCurrentPoint
@@ -157,7 +169,9 @@
 
 - (void)addRectangle:(CGRect)aRect
 {
-	CGPathAddRect(((NSMPDFMutablePathNode *)_currentNode).path, NULL, aRect);
+	if (![_currentNode isKindOfClass:[NSMPDFMutablePathNode class]])
+		[self addPath];
+//	CGPathAddRect(((NSMPDFMutablePathNode *)_currentNode).path, NULL, aRect);
 }
 
 - (void)addCurveToPoint:(CGPoint)p controlPoint1:(CGPoint)cp1 controlPoint2:(CGPoint)cp2
@@ -173,10 +187,12 @@
 
 - (void)strokePath
 {
+	_currentNode = nil;
 }
 
 - (void)fillPath
 {
+	_currentNode = nil;
 }
 
 - (void)fillPathEO

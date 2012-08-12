@@ -17,7 +17,7 @@
 @implementation NSMPDFPageView
 {
 	NSMPDFTreeNodeLayer *_rootLayer;
-    NSArray *_highlightedLayers;
+    CAShapeLayer *_highlightLayer;
 }
 
 #pragma mark - Initialization & Deallocation
@@ -54,28 +54,59 @@
 
 - (void)highlightNodes:(NSSet *)nodes
 {
-	for (CALayer *layer in _highlightedLayers) {
-    	layer.borderWidth = 0.0f;
-        layer.borderColor = nil;
+	if (nodes.count < 1) {
+    	_highlightLayer.hidden = YES;
     }
-    _highlightedLayers = nil;
     
-	NSArray *(^__block layersForNodes)(NSMPDFTreeNodeLayer *) = ^NSArray *(NSMPDFTreeNodeLayer *layer) {
-    	NSMutableArray *result = [NSMutableArray array];
-        if ([nodes containsObject:layer.node])
-        	[result addObject:layer];
-        for (CALayer *sublayer in layer.sublayers) {
-        	if ([sublayer isKindOfClass:[NSMPDFTreeNodeLayer class]])
-            	[result addObjectsFromArray:layersForNodes((NSMPDFTreeNodeLayer *)sublayer)];
+    if (!_highlightLayer) {
+    	_highlightLayer = [CAShapeLayer layer];
+        [self.layer addSublayer:_highlightLayer];
+    }
+    
+	NSArray *(^__block layersForNodes)(NSMPDFTreeNodeLayer *) =
+    	^NSArray *(NSMPDFTreeNodeLayer *layer) {
+            NSMutableArray *result = [NSMutableArray array];
+            if ([nodes containsObject:layer.node])
+                [result addObject:layer];
+            for (CALayer *sublayer in layer.sublayers) {
+                if ([sublayer isKindOfClass:[NSMPDFTreeNodeLayer class]])
+                    [result addObjectsFromArray:layersForNodes((NSMPDFTreeNodeLayer *)sublayer)];
+            }
+            return result;
+	    };
+    
+	NSArray *highlightedLayers = layersForNodes(_rootLayer);
+    CGRect frame = CGRectNull;
+    CGMutablePathRef path = CGPathCreateMutable();
+    
+    for (NSMPDFTreeNodeLayer *layer in highlightedLayers) {
+    	if ([layer.node isKindOfClass:[NSMPDFPathNode class]]) {
+        	CGPathAddPath(path, NULL, ((NSMPDFPathNode *)layer.node).path);
+        } else if ([layer.node isKindOfClass:[NSMPDFClippingGroupNode class]]) {
+        	CGPathAddPath(path, NULL, ((NSMPDFClippingGroupNode *)layer.node).clippingPath);
+        } else {
+        	CGPathAddRect(path, NULL, layer.bounds);
         }
-        return result;
-    };
-    
-	_highlightedLayers = layersForNodes(_rootLayer);
-    for (CALayer *layer in _highlightedLayers) {
-    	layer.borderWidth = 2.0f;
-		layer.borderColor = [NSColor redColor].CGColor;
+        
+    	CGRect layerFrame = [self.layer convertRect:layer.frame fromLayer:layer.superlayer];
+		if (CGRectIsNull(frame)) {
+        	frame = layerFrame;
+            continue;
+        }
+        frame.origin.x = MIN(CGRectGetMinX(frame), CGRectGetMinX(layerFrame));
+        frame.origin.y = MIN(CGRectGetMinY(frame), CGRectGetMinY(layerFrame));
+    	frame.size.width = MAX(CGRectGetWidth(frame), CGRectGetMaxX(layerFrame));
+    	frame.size.height = MAX(CGRectGetHeight(frame), CGRectGetMaxY(layerFrame));
     }
+    
+    _highlightLayer.hidden = NO;
+    _highlightLayer.frame = frame;
+    _highlightLayer.path = path;
+    _highlightLayer.fillColor = nil;
+    _highlightLayer.strokeColor = [NSColor redColor].CGColor;
+    _highlightLayer.lineWidth = 1.0f;
+    
+    CGPathRelease(path);
 }
 @end
 
@@ -112,9 +143,8 @@
 - (void)drawInContext:(CGContextRef)ctx
 {
 	if ([_node isKindOfClass:[NSMPDFPathNode class]]) {
-    	NSMPDFPathNode *pathNode = (NSMPDFPathNode *)_node;
-		CGContextSetFillColorWithColor(ctx, [NSColor blackColor].CGColor);
-        CGContextAddPath(ctx, pathNode.path);
+    	CGContextSetFillColorWithColor(ctx, [NSColor blueColor].CGColor);
+		[_node drawInContext:ctx];
         CGContextFillPath(ctx);
     }
 }

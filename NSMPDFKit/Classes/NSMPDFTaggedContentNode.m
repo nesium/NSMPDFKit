@@ -9,11 +9,6 @@
 #import "NSMPDFTaggedContentNode.h"
 
 @implementation NSMPDFTaggedContentNode
-{
-	NSDictionary *_properties;
-}
-
-@synthesize properties = _properties;
 
 #pragma mark - Initialization & Deallocation
 
