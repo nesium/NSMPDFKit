@@ -134,6 +134,21 @@
 		2CDBA87415C571BE004221FD /* OutlinePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA87215C571BE004221FD /* OutlinePanel.xib */; };
 		2CDBA87715C572F4004221FD /* NSMOutlinePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */; };
 		2CFBDFB61666BF6C0001147C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFBDFB51666BF6C0001147C /* ImageIO.framework */; };
+		2CFC42001666C78C00BF3EF1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFC41FF1666C78C00BF3EF1 /* UIKit.framework */; };
+		2CFC42011666C78C00BF3EF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CF15B2DEBD00308992 /* Foundation.framework */; };
+		2CFC42021666C78C00BF3EF1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79310115B2E12100308992 /* CoreGraphics.framework */; };
+		2CFC42081666C78C00BF3EF1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42061666C78C00BF3EF1 /* InfoPlist.strings */; };
+		2CFC420A1666C78C00BF3EF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC42091666C78C00BF3EF1 /* main.m */; };
+		2CFC420E1666C78C00BF3EF1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC420D1666C78C00BF3EF1 /* AppDelegate.m */; };
+		2CFC42101666C78C00BF3EF1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC420F1666C78C00BF3EF1 /* Default.png */; };
+		2CFC42121666C78C00BF3EF1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42111666C78C00BF3EF1 /* Default@2x.png */; };
+		2CFC42141666C78C00BF3EF1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42131666C78C00BF3EF1 /* Default-568h@2x.png */; };
+		2CFC42171666C78C00BF3EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC42161666C78C00BF3EF1 /* ViewController.m */; };
+		2CFC421A1666C78C00BF3EF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42181666C78C00BF3EF1 /* ViewController.xib */; };
+		2CFC42211666C7BF00BF3EF1 /* libNSMPDFKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */; };
+		2CFC42231666C7DF00BF3EF1 /* add phone and address slideout.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */; };
+		2CFC42261666C8BA00BF3EF1 /* NSMPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */; };
+		2CFC42271666C9CC00BF3EF1 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79310715B2E24300308992 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +179,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C79313915B2FF2500308992;
 			remoteInfo = "NSMPDFKit-OSX";
+		};
+		2CFC421F1666C79C00BF3EF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C7930C315B2DEBD00308992 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C7930CB15B2DEBD00308992;
+			remoteInfo = NSMPDFKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -268,6 +290,23 @@
 		2CDBA87515C572F4004221FD /* NSMOutlinePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMOutlinePanelController.h; sourceTree = "<group>"; };
 		2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMOutlinePanelController.m; sourceTree = "<group>"; };
 		2CFBDFB51666BF6C0001147C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		2CFC41FD1666C78C00BF3EF1 /* iOSDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CFC41FF1666C78C00BF3EF1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2CFC42051666C78C00BF3EF1 /* iOSDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSDemoApp-Info.plist"; sourceTree = "<group>"; };
+		2CFC42071666C78C00BF3EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2CFC42091666C78C00BF3EF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CFC420B1666C78C00BF3EF1 /* iOSDemoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSDemoApp-Prefix.pch"; sourceTree = "<group>"; };
+		2CFC420C1666C78C00BF3EF1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CFC420D1666C78C00BF3EF1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CFC420F1666C78C00BF3EF1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		2CFC42111666C78C00BF3EF1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2CFC42131666C78C00BF3EF1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2CFC42151666C78C00BF3EF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CFC42161666C78C00BF3EF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CFC42191666C78C00BF3EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "add phone and address slideout.pdf"; sourceTree = "<group>"; };
+		2CFC42241666C8BA00BF3EF1 /* NSMPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPageView.h; sourceTree = "<group>"; };
+		2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +356,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CFC41FA1666C78C00BF3EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFC42271666C9CC00BF3EF1 /* CoreText.framework in Frameworks */,
+				2CFC42211666C7BF00BF3EF1 /* libNSMPDFKit.a in Frameworks */,
+				2CFC42001666C78C00BF3EF1 /* UIKit.framework in Frameworks */,
+				2CFC42011666C78C00BF3EF1 /* Foundation.framework in Frameworks */,
+				2CFC42021666C78C00BF3EF1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -355,6 +406,7 @@
 				2C0125F715B3650B008A57BA /* NSMPDFKitResources */,
 				2CAF77B915C554390076C4EB /* DemoApp */,
 				2CDBA83D15C570A5004221FD /* TreeDemoAPP */,
+				2CFC42031666C78C00BF3EF1 /* iOSDemoApp */,
 				2C7930CE15B2DEBD00308992 /* Frameworks */,
 				2C7930CD15B2DEBD00308992 /* Products */,
 			);
@@ -368,6 +420,7 @@
 				2C0125F415B3650B008A57BA /* NSMPDFKit.bundle */,
 				2CAF77B615C554390076C4EB /* DemoApp.app */,
 				2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */,
+				2CFC41FD1666C78C00BF3EF1 /* iOSDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,6 +435,7 @@
 				2C79313B15B2FF2500308992 /* Cocoa.framework */,
 				2C0125F515B3650B008A57BA /* CoreFoundation.framework */,
 				2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */,
+				2CFC41FF1666C78C00BF3EF1 /* UIKit.framework */,
 				2C79313D15B2FF2500308992 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -627,6 +681,36 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		2CFC42031666C78C00BF3EF1 /* iOSDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC420C1666C78C00BF3EF1 /* AppDelegate.h */,
+				2CFC420D1666C78C00BF3EF1 /* AppDelegate.m */,
+				2CFC42151666C78C00BF3EF1 /* ViewController.h */,
+				2CFC42161666C78C00BF3EF1 /* ViewController.m */,
+				2CFC42181666C78C00BF3EF1 /* ViewController.xib */,
+				2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */,
+				2CFC42241666C8BA00BF3EF1 /* NSMPDFPageView.h */,
+				2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */,
+				2CFC42041666C78C00BF3EF1 /* Supporting Files */,
+			);
+			path = iOSDemoApp;
+			sourceTree = "<group>";
+		};
+		2CFC42041666C78C00BF3EF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CFC42051666C78C00BF3EF1 /* iOSDemoApp-Info.plist */,
+				2CFC42061666C78C00BF3EF1 /* InfoPlist.strings */,
+				2CFC42091666C78C00BF3EF1 /* main.m */,
+				2CFC420B1666C78C00BF3EF1 /* iOSDemoApp-Prefix.pch */,
+				2CFC420F1666C78C00BF3EF1 /* Default.png */,
+				2CFC42111666C78C00BF3EF1 /* Default@2x.png */,
+				2CFC42131666C78C00BF3EF1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -773,6 +857,24 @@
 			productReference = 2CDBA83A15C570A5004221FD /* TreeDemoAPP.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CFC41FC1666C78C00BF3EF1 /* iOSDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CFC421D1666C78C00BF3EF1 /* Build configuration list for PBXNativeTarget "iOSDemoApp" */;
+			buildPhases = (
+				2CFC41F91666C78C00BF3EF1 /* Sources */,
+				2CFC41FA1666C78C00BF3EF1 /* Frameworks */,
+				2CFC41FB1666C78C00BF3EF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CFC42201666C79C00BF3EF1 /* PBXTargetDependency */,
+			);
+			name = iOSDemoApp;
+			productName = iOSDemoApp;
+			productReference = 2CFC41FD1666C78C00BF3EF1 /* iOSDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -800,6 +902,7 @@
 				2C79313915B2FF2500308992 /* NSMPDFKit-OSX */,
 				2CAF77B515C554390076C4EB /* DemoApp */,
 				2CDBA83915C570A5004221FD /* TreeDemoAPP */,
+				2CFC41FC1666C78C00BF3EF1 /* iOSDemoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -847,6 +950,19 @@
 				2CDBA86015C57102004221FD /* MainMenu.xib in Resources */,
 				2CDBA86115C57102004221FD /* NSMDocument.xib in Resources */,
 				2CDBA87415C571BE004221FD /* OutlinePanel.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CFC41FB1666C78C00BF3EF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFC42081666C78C00BF3EF1 /* InfoPlist.strings in Resources */,
+				2CFC42101666C78C00BF3EF1 /* Default.png in Resources */,
+				2CFC42121666C78C00BF3EF1 /* Default@2x.png in Resources */,
+				2CFC42141666C78C00BF3EF1 /* Default-568h@2x.png in Resources */,
+				2CFC421A1666C78C00BF3EF1 /* ViewController.xib in Resources */,
+				2CFC42231666C7DF00BF3EF1 /* add phone and address slideout.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,6 +1081,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CFC41F91666C78C00BF3EF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CFC420A1666C78C00BF3EF1 /* main.m in Sources */,
+				2CFC420E1666C78C00BF3EF1 /* AppDelegate.m in Sources */,
+				2CFC42171666C78C00BF3EF1 /* ViewController.m in Sources */,
+				2CFC42261666C8BA00BF3EF1 /* NSMPDFPageView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -987,6 +1114,11 @@
 			isa = PBXTargetDependency;
 			target = 2C79313915B2FF2500308992 /* NSMPDFKit-OSX */;
 			targetProxy = 2CDBA87015C5714E004221FD /* PBXContainerItemProxy */;
+		};
+		2CFC42201666C79C00BF3EF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C7930CB15B2DEBD00308992 /* NSMPDFKit */;
+			targetProxy = 2CFC421F1666C79C00BF3EF1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1125,6 +1257,22 @@
 				2CDBA87315C571BE004221FD /* en */,
 			);
 			name = OutlinePanel.xib;
+			sourceTree = "<group>";
+		};
+		2CFC42061666C78C00BF3EF1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFC42071666C78C00BF3EF1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2CFC42181666C78C00BF3EF1 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CFC42191666C78C00BF3EF1 /* en */,
+			);
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1377,6 +1525,45 @@
 			};
 			name = Release;
 		};
+		2CFC421B1666C78C00BF3EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSDemoApp/iOSDemoApp-Prefix.pch";
+				INFOPLIST_FILE = "iOSDemoApp/iOSDemoApp-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-objC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2CFC421C1666C78C00BF3EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSDemoApp/iOSDemoApp-Prefix.pch";
+				INFOPLIST_FILE = "iOSDemoApp/iOSDemoApp-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-objC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1442,6 +1629,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		2CFC421D1666C78C00BF3EF1 /* Build configuration list for PBXNativeTarget "iOSDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CFC421B1666C78C00BF3EF1 /* Debug */,
+				2CFC421C1666C78C00BF3EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
