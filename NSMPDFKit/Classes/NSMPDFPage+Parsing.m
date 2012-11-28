@@ -220,31 +220,60 @@
     if (!CGPDFDictionaryGetInteger(dict, "BitsPerComponent", &bps))
 		return nil;
     
-    // for the time being, we only support DeviceRGB and only if the colorspace is 
-    // specified as a name
-    const char *colorspaceName;
-    if (!CGPDFDictionaryGetName(dict, "ColorSpace", &colorspaceName) || 
-    	strcmp(colorspaceName, "DeviceRGB") != 0) {
-        NDCLog(@"Image ColorSpace not supported.");
-        return nil;
+    CGPDFObjectRef colorSpaceObject;
+    if (!CGPDFDictionaryGetObject(dict, "ColorSpace", &colorSpaceObject)) {
+    	NDCLog(@"Could not get ColorSpace");
+    	return nil;
     }
+    
+    CGColorSpaceRef colorSpace = NULL;
+    
+    // for the time being, we only support DeviceRGB and ICCBased ColorSpaces
+    switch (CGPDFObjectGetType(colorSpaceObject)) {
+    	case kCGPDFObjectTypeArray: {
+        	CGPDFArrayRef colorSpaceArray;
+            CGPDFObjectGetValue(colorSpaceObject,
+            	kCGPDFObjectTypeArray, &colorSpaceArray);
+        	colorSpace = NSMPDF_newICCColorSpaceFromArray(colorSpaceArray);
+        	break;
+        }
+        
+        case kCGPDFObjectTypeName: {
+            const char *colorSpaceName;
+            CGPDFObjectGetValue(colorSpaceObject, kCGPDFObjectTypeName, &colorSpaceName);
+            if (strcmp(colorSpaceName, "DeviceRGB") != 0) {
+                NDCLog(@"Image ColorSpace (%s) not supported.", colorSpaceName);
+                return nil;
+            }
+            colorSpace = CGColorSpaceCreateDeviceRGB();
+        	break;
+        }
+        
+        default:
+        	NDCLog(@"Unsupported ColorSpace type");
+        	break;
+    }
+    
+    if (colorSpace == NULL)
+    	return nil;
     
     CGPDFDataFormat format;
     CFDataRef data = CGPDFStreamCopyData(stream, &format);
-    if (format != CGPDFDataFormatJPEGEncoded && format != CGPDFDataFormatJPEG2000) {
-    	NDCLog(@"Image data format not supported.");
-        CFRelease(data);
-		return nil;
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData(data);
+    CGImageRef image = NULL;
+    
+    if (format == CGPDFDataFormatJPEGEncoded || format == CGPDFDataFormatJPEG2000) {
+        image = CGImageCreateWithJPEGDataProvider(provider, NULL, YES,
+            kCGRenderingIntentDefault);
+    } else if (format == CGPDFDataFormatRaw) {
+        size_t bitsPerPixel = CGColorSpaceGetNumberOfComponents(colorSpace) * bps;
+        size_t bytesPerRow = (bitsPerPixel * width) / 8;
+        image = CGImageCreate(width, height, bps, bitsPerPixel, bytesPerRow,
+            colorSpace, 0, provider, NULL, 1, kCGRenderingIntentDefault);
     }
     
-    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-    CGDataProviderRef provider = CGDataProviderCreateWithCFData(data);
-    
-	CGImageRef image = CGImageCreateWithJPEGDataProvider(provider, NULL, YES, 
-    	kCGRenderingIntentDefault);
-    
     CGDataProviderRelease(provider);
-    CGColorSpaceRelease(colorspace);
+    CGColorSpaceRelease(colorSpace);
     CFRelease(data);
     
     return image;
@@ -308,21 +337,7 @@
     	NDCLog(@"ColorSpace Lab not supported");
         return NULL;
     } else if (strcmp(name, "ICCBased") == 0) {
-    	CGPDFStreamRef ICCStream;
-        if (!CGPDFArrayGetStream(colorSpaceArray, 1, &ICCStream)) {
-        	NDCLog(@"Could not read ICCStream");
-            return NULL;
-        }
-        
-	    CGPDFDataFormat format;
-	    CFDataRef data = CGPDFStreamCopyData(ICCStream, &format);
-	    if (format != CGPDFDataFormatRaw) {
-	    	NDCLog(@"ICC data format not supported.");
-    	    CFRelease(data);
-			return NULL;
-        }
-        
-		return CGColorSpaceCreateWithICCProfile(data);
+		return NSMPDF_newICCColorSpaceFromArray(colorSpaceArray);
     } else if (strcmp(name, "DeviceRGB") == 0 ||
     	strcmp(name, "DeviceCMYK") == 0 ||
         strcmp(name, "DeviceGray") == 0) {

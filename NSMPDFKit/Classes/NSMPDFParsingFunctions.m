@@ -179,6 +179,34 @@ static CGColorRef NSMPDF_createColorUsingColorSpace(CGPDFScannerRef scanner,
     return NULL;
 }
 
+static CGColorSpaceRef NSMPDF_newICCColorSpaceFromArray(CGPDFArrayRef colorSpaceArray) {
+    const char *name;
+    if (!CGPDFArrayGetName(colorSpaceArray, 0, &name)) {
+    	NDCLog(@"Could not get ColorSpace name");
+		return NULL;
+    }
+    
+    if (strcmp(name, "ICCBased") != 0) {
+    	NDCLog(@"ColorSpace is not ICCBased (%s)", name);
+    }
+    
+    CGPDFStreamRef ICCStream;
+    if (!CGPDFArrayGetStream(colorSpaceArray, 1, &ICCStream)) {
+        NDCLog(@"Could not read ICCStream");
+        return NULL;
+    }
+    
+    CGPDFDataFormat format;
+    CFDataRef data = CGPDFStreamCopyData(ICCStream, &format);
+    if (format != CGPDFDataFormatRaw) {
+        NDCLog(@"ICC data format not supported.");
+        CFRelease(data);
+        return NULL;
+    }
+    
+    return CGColorSpaceCreateWithICCProfile(data);
+}
+
 
 
 

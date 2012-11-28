@@ -133,6 +133,7 @@
 		2CDBA86F15C57147004221FD /* NSMPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313A15B2FF2500308992 /* NSMPDFKit.framework */; };
 		2CDBA87415C571BE004221FD /* OutlinePanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDBA87215C571BE004221FD /* OutlinePanel.xib */; };
 		2CDBA87715C572F4004221FD /* NSMOutlinePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */; };
+		2CFBDFB61666BF6C0001147C /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFBDFB51666BF6C0001147C /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,6 +267,7 @@
 		2CDBA87315C571BE004221FD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/OutlinePanel.xib; sourceTree = "<group>"; };
 		2CDBA87515C572F4004221FD /* NSMOutlinePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMOutlinePanelController.h; sourceTree = "<group>"; };
 		2CDBA87615C572F4004221FD /* NSMOutlinePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMOutlinePanelController.m; sourceTree = "<group>"; };
+		2CFBDFB51666BF6C0001147C /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CFBDFB61666BF6C0001147C /* ImageIO.framework in Frameworks */,
 				2CAF77EE15C5558F0076C4EB /* NSMPDFKit.framework in Frameworks */,
 				2CAF77B815C554390076C4EB /* Cocoa.framework in Frameworks */,
 			);
@@ -372,6 +375,7 @@
 		2C7930CE15B2DEBD00308992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CFBDFB51666BF6C0001147C /* ImageIO.framework */,
 				2C79310715B2E24300308992 /* CoreText.framework */,
 				2C79310115B2E12100308992 /* CoreGraphics.framework */,
 				2C7930CF15B2DEBD00308992 /* Foundation.framework */,
