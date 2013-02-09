@@ -36,6 +36,7 @@
 		2C1DAFF615D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */; };
 		2C1DAFF715D6C7880066DA05 /* NSMPDFClippingGroupNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */; };
 		2C43D9C915C5D9BF00C9828C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */; };
+		2C6016B7166A8AF0006E6B5B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6016B6166A8AF0006E6B5B /* QuartzCore.framework */; };
 		2C7930D015B2DEBD00308992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CF15B2DEBD00308992 /* Foundation.framework */; };
 		2C7930EF15B2DF2400308992 /* NSMPDFContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930DF15B2DF2400308992 /* NSMPDFContext.m */; };
 		2C7930F015B2DF2400308992 /* NSMPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7930E115B2DF2400308992 /* NSMPDFDocument.m */; };
@@ -74,6 +75,7 @@
 		2C79318B15B33B4800308992 /* NSMPDFShading.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C79318815B33B4800308992 /* NSMPDFShading.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2C79318C15B33B4800308992 /* NSMPDFShading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79318915B33B4800308992 /* NSMPDFShading.m */; };
 		2C79318D15B33B4800308992 /* NSMPDFShading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C79318915B33B4800308992 /* NSMPDFShading.m */; };
+		2C8B19B9166A833700A69C15 /* NSMPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8B19B8166A833700A69C15 /* NSMPageViewController.m */; };
 		2CAF77B815C554390076C4EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C79313B15B2FF2500308992 /* Cocoa.framework */; };
 		2CAF77BE15C554390076C4EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CAF77BC15C554390076C4EB /* InfoPlist.strings */; };
 		2CAF77C015C554390076C4EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CAF77BF15C554390076C4EB /* main.m */; };
@@ -143,8 +145,6 @@
 		2CFC42101666C78C00BF3EF1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC420F1666C78C00BF3EF1 /* Default.png */; };
 		2CFC42121666C78C00BF3EF1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42111666C78C00BF3EF1 /* Default@2x.png */; };
 		2CFC42141666C78C00BF3EF1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42131666C78C00BF3EF1 /* Default-568h@2x.png */; };
-		2CFC42171666C78C00BF3EF1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC42161666C78C00BF3EF1 /* ViewController.m */; };
-		2CFC421A1666C78C00BF3EF1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42181666C78C00BF3EF1 /* ViewController.xib */; };
 		2CFC42211666C7BF00BF3EF1 /* libNSMPDFKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */; };
 		2CFC42231666C7DF00BF3EF1 /* add phone and address slideout.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */; };
 		2CFC42261666C8BA00BF3EF1 /* NSMPDFPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */; };
@@ -201,6 +201,7 @@
 		2C1DAFF215D6C7880066DA05 /* NSMPDFClippingGroupNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFClippingGroupNode.h; sourceTree = "<group>"; };
 		2C1DAFF315D6C7880066DA05 /* NSMPDFClippingGroupNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFClippingGroupNode.m; sourceTree = "<group>"; };
 		2C43D9C815C5D9BF00C9828C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		2C6016B6166A8AF0006E6B5B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		2C7930CC15B2DEBD00308992 /* libNSMPDFKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSMPDFKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7930CF15B2DEBD00308992 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C7930D315B2DEBD00308992 /* NSMPDFKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMPDFKit-Prefix.pch"; sourceTree = "<group>"; };
@@ -231,6 +232,8 @@
 		2C79317E15B31D7100308992 /* NSMPDFCGContextRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFCGContextRenderer.m; sourceTree = "<group>"; };
 		2C79318815B33B4800308992 /* NSMPDFShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFShading.h; sourceTree = "<group>"; };
 		2C79318915B33B4800308992 /* NSMPDFShading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFShading.m; sourceTree = "<group>"; };
+		2C8B19B7166A833700A69C15 /* NSMPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPageViewController.h; sourceTree = "<group>"; };
+		2C8B19B8166A833700A69C15 /* NSMPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPageViewController.m; sourceTree = "<group>"; };
 		2CAF77B615C554390076C4EB /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAF77BB15C554390076C4EB /* DemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DemoApp-Info.plist"; sourceTree = "<group>"; };
 		2CAF77BD15C554390076C4EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -301,9 +304,6 @@
 		2CFC420F1666C78C00BF3EF1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2CFC42111666C78C00BF3EF1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2CFC42131666C78C00BF3EF1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		2CFC42151666C78C00BF3EF1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		2CFC42161666C78C00BF3EF1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		2CFC42191666C78C00BF3EF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "add phone and address slideout.pdf"; sourceTree = "<group>"; };
 		2CFC42241666C8BA00BF3EF1 /* NSMPDFPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMPDFPageView.h; sourceTree = "<group>"; };
 		2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMPDFPageView.m; sourceTree = "<group>"; };
@@ -360,6 +360,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6016B7166A8AF0006E6B5B /* QuartzCore.framework in Frameworks */,
 				2CFC42271666C9CC00BF3EF1 /* CoreText.framework in Frameworks */,
 				2CFC42211666C7BF00BF3EF1 /* libNSMPDFKit.a in Frameworks */,
 				2CFC42001666C78C00BF3EF1 /* UIKit.framework in Frameworks */,
@@ -428,6 +429,7 @@
 		2C7930CE15B2DEBD00308992 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2C6016B6166A8AF0006E6B5B /* QuartzCore.framework */,
 				2CFBDFB51666BF6C0001147C /* ImageIO.framework */,
 				2C79310715B2E24300308992 /* CoreText.framework */,
 				2C79310115B2E12100308992 /* CoreGraphics.framework */,
@@ -686,10 +688,9 @@
 			children = (
 				2CFC420C1666C78C00BF3EF1 /* AppDelegate.h */,
 				2CFC420D1666C78C00BF3EF1 /* AppDelegate.m */,
-				2CFC42151666C78C00BF3EF1 /* ViewController.h */,
-				2CFC42161666C78C00BF3EF1 /* ViewController.m */,
-				2CFC42181666C78C00BF3EF1 /* ViewController.xib */,
 				2CFC42221666C7DF00BF3EF1 /* add phone and address slideout.pdf */,
+				2C8B19B7166A833700A69C15 /* NSMPageViewController.h */,
+				2C8B19B8166A833700A69C15 /* NSMPageViewController.m */,
 				2CFC42241666C8BA00BF3EF1 /* NSMPDFPageView.h */,
 				2CFC42251666C8BA00BF3EF1 /* NSMPDFPageView.m */,
 				2CFC42041666C78C00BF3EF1 /* Supporting Files */,
@@ -961,7 +962,6 @@
 				2CFC42101666C78C00BF3EF1 /* Default.png in Resources */,
 				2CFC42121666C78C00BF3EF1 /* Default@2x.png in Resources */,
 				2CFC42141666C78C00BF3EF1 /* Default-568h@2x.png in Resources */,
-				2CFC421A1666C78C00BF3EF1 /* ViewController.xib in Resources */,
 				2CFC42231666C7DF00BF3EF1 /* add phone and address slideout.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1087,8 +1087,8 @@
 			files = (
 				2CFC420A1666C78C00BF3EF1 /* main.m in Sources */,
 				2CFC420E1666C78C00BF3EF1 /* AppDelegate.m in Sources */,
-				2CFC42171666C78C00BF3EF1 /* ViewController.m in Sources */,
 				2CFC42261666C8BA00BF3EF1 /* NSMPDFPageView.m in Sources */,
+				2C8B19B9166A833700A69C15 /* NSMPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,14 +1265,6 @@
 				2CFC42071666C78C00BF3EF1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2CFC42181666C78C00BF3EF1 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CFC42191666C78C00BF3EF1 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1637,6 +1629,7 @@
 				2CFC421C1666C78C00BF3EF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
